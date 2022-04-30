@@ -10,6 +10,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Nunito:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Poppins:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+    <!-- dummy maps -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+    crossorigin=""></script>
 </head>
 <body class="home">
 
@@ -33,7 +41,7 @@
             </div>
         </div>
         
-        <div class="header__navigation [ flex ] [ flex--align-center ]">
+        <nav class="header__navigation [ flex ] [ flex--align-center ]">
             <div class="header__links [ container--width-xxxl ] [ margin--x-auto ]">
                 <ul class="header__links__menu [ flex ] [ flex--align-center ]">
                     <li class="header__links__menu--item header__links__menu--item--has-submenu">
@@ -54,15 +62,25 @@
                     <li class="header__links__menu--item"><a href="#">Contact</a></li>
                 </ul>
             </div>
-        </div>
+        </nav>
     </header>
 
     <!-- main content -->
     <main class="wrapper [ padding--bottom-30 ]">
-        <div class="wrapper__hero">
-            <img src="/img/peta-indonesia.png" alt="">
+        <div class="wrapper__maps">
+            <div class="wrapper__maps__category">
+                <ul>
+                    <li><a href="#">Gas Storage</a></li>
+                    <li><a href="#">Petroleum Storage</a></li>
+                    <li><a href="#">Storage of Other Liquids</a></li>
+                    <li><a href="#">Fresh Water Supply</a></li>
+                    <li><a href="#">Mineral Water</a></li>
+                    <li><a href="#">Waste Management</a></li>
+                </ul>
+            </div>
+            <div id="map"></div>
         </div>
-        <div class="wrapper__main [ container--width-xxxl ] [ margin--x-auto ]">
+        <section class="wrapper__main [ container--width-xxxl ] [ margin--x-auto ] [ padding--y-20 ]">
             <h1>Sustainable Tank Storage Solutions</h1>
             <h2>Around The Globe</h2>
             <ul class="wrapper__main__menu">
@@ -73,7 +91,29 @@
                 <li><a href="#">Mineral Water</a></li>
                 <li><a href="#">Waste Management</a></li>
             </ul>
-        </div>
+        </section>
+        <section class="wrapper__main [ container--width-xxxl ] [ margin--x-auto ] [ padding--y-50 ]">
+            <div class="wrapper__main__grid">
+                <div class="wrapper__main__grid--cell">
+                    <h3>Terminal & Location Quickfinder</h3>
+                    <form action="#" class="quick-finder">
+                        <label for="quickfinder-autocomplete"></label>
+                        <div class="autocomplete-wrapper"><input type="text" class="terminal-autocomplete" data-json="/en/contact/locations-worldwide.json" id="quickfinder-autocomplete" placeholder="Terminal search" autocomplete="off"></div>
+
+                        <div class="quick-finder__buttons [ flex ] [ flex--align-center ]">
+                          <a href="/en/business-areas-tank-storage-logistics-and-tank-terminals.html" class="btn">Terminal overview</a>
+                          <a href="/en/contact/locations-worldwide.html" class="btn">Locations Worldwide</a>
+                        </div>
+                      </form>
+                </div>
+                <div class="wrapper__main__grid--cell">
+                    <h3>Responsibility</h3>
+                    <p>
+                        We believe that only a management system based on the principles of sustainability will enable and secure the future of our business. Areas of focus include safety leadership & strong HSSE culture, environmental protection, operational excellence, our employees and surrounding communities. more
+                        </p>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
@@ -87,6 +127,17 @@
     </footer>
 
     <script src="js/app.js"></script>
+    <script>
+        var map = L.map('map').setView([51.505, -0.09], 13);
+        var tiles = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+            maxZoom: 18,
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
+                'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+            id: 'mapbox/streets-v11',
+            tileSize: 512,
+            zoomOffset: -1
+	    }).addTo(map);
+    </script>
     
 </body>
 </html>

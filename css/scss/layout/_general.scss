@@ -20,6 +20,54 @@ body {
     min-height: calc(100vh - 152px);
     padding-top: 152px;
 
+    &__maps {
+        position: relative;
+        height: 0;
+        padding-bottom: 60vh;
+        margin:0.15rem 0 3rem 0;
+
+        #map {
+            position: absolute; 
+            top: 0; 
+            bottom: 0; 
+            width: 100%; 
+            height: 100%;
+            z-index:1;
+            .leaflet-control-container {
+                display: none;
+            }
+        }
+
+        &__category {
+            position: absolute;
+            left: 1ch;
+            top:1ch;
+            padding: 1ch;
+            z-index: 2;
+            ul {
+                list-style: none;
+                margin:0;
+                padding:0;
+                li {
+                    + * {
+                        margin-top: 0.5rem;
+                    }
+                    a {
+                        display: inline-flex;
+                        align-items: center;
+                        background-color: $color-primary;
+                        color:$color-white;
+
+                        border-radius: 8px;
+                        font-size: 0.85rem;
+
+                        text-decoration: none;
+                        padding: 0.25rem 0.5em;
+                    }
+                }
+            }
+        }
+    }
     &__main {
         h1 {
             color:$color-primary;
@@ -56,6 +104,49 @@ body {
                     }
                 }
             }
+        }
+
+        &__grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            gap:2rem;
+
+            &--cell {
+                :is(h1,h2,h3) {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+}
+
+.quick-finder {
+    background-color: $color-grey;
+    padding: 2rem;
+    input[type=text] {
+        width: 100%;
+        padding: 0.65rem 1rem;
+        border:0;
+        border-radius: 6px;
+    }
+    &__buttons {
+        margin-top: 1rem;
+        gap:1rem;
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            flex-grow: 1;
+            background-color: $color-primary;
+            color:$color-white;
+
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+
+            border-radius: 6px;
         }
     }
 }
