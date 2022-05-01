@@ -61,8 +61,36 @@
                     <li class="header__links__menu--item"><a href="#">News & Info</a></li>
                     <li class="header__links__menu--item"><a href="#">Contact</a></li>
                 </ul>
+                <div class="header__addon">
+                    <ul class="language">
+                        <li>
+                            <a href="/de/home.html" hreflang="de-DE" title="Deutsch">
+                                Deutsch
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/en/home.html" hreflang="en-US" title="english">
+                                English
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/es/home.html" hreflang="es-ES" title="spanisch">
+                                Español
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
+
+        <div class="header__search">
+            <form action="" class="[ flex ] [ flex--align-center ] [ container--width-xxxl ] [ margin--x-auto ]">
+                <input type="search" name="" id="" placeholder="Search term">
+                <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </button>
+            </form>
+        </div>
     </header>
 
     <!-- main content -->
@@ -80,42 +108,47 @@
             </div>
             <div id="map"></div>
         </div>
-        <section class="wrapper__main [ container--width-xxxl ] [ margin--x-auto ] [ padding--y-20 ]">
-            <h1>Sustainable Tank Storage Solutions</h1>
-            <h2>Around The Globe</h2>
-            <ul class="wrapper__main__menu">
-                <li><a href="#">Gas Storage</a></li>
-                <li><a href="#">Petroleum Storage</a></li>
-                <li><a href="#">Storage of Other Liquids</a></li>
-                <li><a href="#">Fresh Water Supply</a></li>
-                <li><a href="#">Mineral Water</a></li>
-                <li><a href="#">Waste Management</a></li>
-            </ul>
-        </section>
-        <section class="wrapper__main [ container--width-xxxl ] [ margin--x-auto ] [ padding--y-50 ]">
-            <div class="wrapper__main__grid">
-                <div class="wrapper__main__grid--cell">
-                    <h3>Terminal & Location Quickfinder</h3>
-                    <form action="#" class="quick-finder">
-                        <label for="quickfinder-autocomplete"></label>
-                        <div class="autocomplete-wrapper"><input type="text" class="terminal-autocomplete" data-json="/en/contact/locations-worldwide.json" id="quickfinder-autocomplete" placeholder="Terminal search" autocomplete="off"></div>
-
-                        <div class="quick-finder__buttons [ flex ] [ flex--align-center ]">
-                          <a href="/en/business-areas-tank-storage-logistics-and-tank-terminals.html" class="btn">Terminal overview</a>
-                          <a href="/en/contact/locations-worldwide.html" class="btn">Locations Worldwide</a>
+        <div class="wrapper__inner">
+            <section class="wrapper__main [ container--width-xxxl ] [ margin--x-auto ] [ padding--y-50 ]">
+                <h1>Sustainable Tank Storage Solutions</h1>
+                <h2>Around The Globe</h2>
+                <ul class="wrapper__main__menu">
+                    <li><a href="#">Gas Storage</a></li>
+                    <li><a href="#">Petroleum Storage</a></li>
+                    <li><a href="#">Storage of Other Liquids</a></li>
+                    <li><a href="#">Fresh Water Supply</a></li>
+                    <li><a href="#">Mineral Water</a></li>
+                    <li><a href="#">Waste Management</a></li>
+                </ul>
+            </section>
+            <section class="wrapper__main [ container--width-xxxl ] [ margin--x-auto ] [ padding--bottom-50 ]">
+                <div class="wrapper__main__grid">
+                    <div class="wrapper__main__grid--cell">
+                        <h3>Terminal & Location Quickfinder</h3>
+                        <form action="#" class="quick-finder">
+                            <label for="quickfinder-autocomplete"></label>
+                            <div class="autocomplete-wrapper"><input type="text" class="terminal-autocomplete" data-json="/en/contact/locations-worldwide.json" id="quickfinder-autocomplete" placeholder="Terminal search" autocomplete="off"></div>
+    
+                            <div class="quick-finder__buttons [ flex ] [ flex--align-center ]">
+                              <a href="/en/business-areas-tank-storage-logistics-and-tank-terminals.html" class="btn">Terminal overview</a>
+                              <a href="/en/contact/locations-worldwide.html" class="btn">Locations Worldwide</a>
+                            </div>
+                          </form>
+                    </div>
+                    <div class="wrapper__main__grid--cell">
+                        <h3>Responsibility</h3>
+                        <div class="wrapper__main__grid--cell__bg">
+                            <p>
+                                We believe that only a management system based on the principles of sustainability will enable and secure the future of our business. Areas of focus include safety leadership & strong HSSE culture, environmental protection, operational excellence, our employees and surrounding communities. more
+                            </p>
                         </div>
-                      </form>
+                    </div>
                 </div>
-                <div class="wrapper__main__grid--cell">
-                    <h3>Responsibility</h3>
-                    <p>
-                        We believe that only a management system based on the principles of sustainability will enable and secure the future of our business. Areas of focus include safety leadership & strong HSSE culture, environmental protection, operational excellence, our employees and surrounding communities. more
-                        </p>
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
 
+    <!-- footer -->
     <footer class="footer">
         <div class="footer__inner">
 
