@@ -201,7 +201,7 @@
                     justify-content: space-between;
 
                     color:$color-black;
-                    padding:0.85rem 2rem;
+                    padding:0.75rem 2rem;
 
                     text-decoration: none;
                     background-color: $color-light-grey;
@@ -335,10 +335,10 @@
         }
 
         form {
-            gap:1rem;
+            gap:0.65rem;
 
             input[type=search] {
-                flex: 1 1 100%;
+                flex-grow: 1;
                 background-color: $color-light-grey;
                 padding:0.85rem 2rem;
                 border-radius: 30px;   
