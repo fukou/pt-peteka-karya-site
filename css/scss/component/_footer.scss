@@ -1,0 +1,51 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/screenwidth' as *;
+
+.footer {
+    background-color: $color-light-grey;
+    @media (max-width:$max-md) {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    &__links {
+        &__menu {
+            list-style: none;
+            margin:0;
+            padding:0;
+            @media (max-width:$max-md) {
+                flex-direction: column;
+            }
+            &--item {
+                @media (min-width:$min-md) {
+                    flex:0 0 20%;
+                    max-width: 20%;
+                }
+                &:not(:first-child) > a {
+                    @media (max-width:$max-md) {
+                        margin-top: 2rem;
+                    }
+                }
+                > a {
+                    display: block;
+
+                    color:$color-primary;
+                    font-size: 1.15rem;
+                    font-weight: 600;
+                    text-decoration: none;
+
+                    margin-bottom: 1rem;
+                }
+                &--submenu {
+                    a {
+                        text-decoration: none;
+                        color:$color-black;
+
+                        font-size: 0.95rem;
+                    }
+                }
+            }
+        }
+    }
+}
