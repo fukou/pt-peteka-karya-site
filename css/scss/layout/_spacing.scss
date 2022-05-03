@@ -2,6 +2,14 @@
     margin:0 auto;
 }
 
+.margin--left-auto {
+    margin-left: auto;
+}
+
+.margin--right-auto {
+    margin-left: auto;
+}
+
 .margin--right-, .margin--x- {
     @for $i from 1 to 20 {
         &#{$i * 5}{

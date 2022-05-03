@@ -4,12 +4,72 @@
 
 .footer {
     background-color: $color-light-grey;
-    @media (max-width:$max-md) {
-        padding-left: 2rem;
-        padding-right: 2rem;
+    
+    &__socmed {
+        background-color: $color-light-grey;
+        // padding-left: calc((100% - 1320px)/2);
+        // padding-right: calc((100% - 1320px)/2);
+
+        border-bottom: 5px solid $color-white;
+
+        span {
+            flex:0 0 20%;
+            max-width: 20%;
+            
+            font-size: 1.15rem;
+            font-weight: 600;
+        }
+
+        ul {
+            flex:0 0 80%;
+            max-width: 80%;
+
+            list-style: none;
+            margin: 0;
+            padding:0;
+            li {
+                + li {
+                    margin-left: 1.25rem;
+                }
+                a {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    svg {
+                        width: 24px;
+                        height: 24px;
+                        transition: 0.5s;
+                    }
+                    &:hover {
+                        svg {
+                            fill:$color-primary;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__inner {
+            > * {
+                @media (max-width:$max-sm) {
+                    flex:0 0 50%!important;
+                    max-width: 50%!important;
+                }
+            }
+        }
+        
+        @media (max-width:$max-md) {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
     }
 
     &__links {
+        @media (max-width:$max-md) {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
         &__menu {
             list-style: none;
             margin:0;

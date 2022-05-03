@@ -341,11 +341,20 @@
                 flex-grow: 1;
                 background-color: $color-light-grey;
                 padding:0.85rem 2rem;
-                border-radius: 30px;   
+                border-radius: 30px;  
+                width: 100%; 
 
                 border:0;
                 @media (max-width:$max-md) {
                     padding:0.55rem 0rem 0.55rem 1rem;
+                    flex:0 0 85%;
+                }
+            }
+            > div {
+                @media (max-width:$max-md) {
+                    flex: 0 0 15%;
+                    width: 100%;
+                    text-align: center;
                 }
             }
             button {
@@ -367,8 +376,8 @@
                 color:$color-white;
 
                 @media (max-width:$max-md) {
-                    width: 2.35rem;
-                    height: 2.35rem;
+                    width: auto;
+                    height: auto;
                 }
             }
         }
