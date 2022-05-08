@@ -3,7 +3,7 @@
 @use '../abstracts/screenwidth' as *;
 
 .header {
-    position: absolute;
+    position: fixed;
     left: 0;
     top:0;
 
@@ -42,7 +42,7 @@
     }
 
     &__action {
-        margin-left: 2rem;
+        margin-right: 1rem;
         > * + * {
             margin-left: 0.75rem;
         }
@@ -87,9 +87,9 @@
     }
 
     &__navigation {
-        background-color: $color-light-grey;
+        // background-color: $color-light-grey;
         @media (min-width:$min-md) {
-            padding:0 2rem;
+            // padding:0 2rem;
         }
     }
 
@@ -124,10 +124,13 @@
     &__links {
         width: 100%;
         @media (min-width:$min-md) {
-            padding:0 2rem;
+            // padding:0 2rem;
         }
         
         @media (max-width:$max-md) {
+            position: absolute;
+            left: 0;
+            top: 100%;
             overflow: hidden;
             max-height: 0;
             transition: 0.4s;
@@ -183,11 +186,11 @@
                             color:$color-white;
     
                             text-shadow: 0px 0px 1px $color-white;
-                            &::after {
-                                height: 8px;
-                                top:-8px;
-                                opacity: 1;
-                            }
+                            // &::after {
+                            //     height: 8px;
+                            //     top:-8px;
+                            //     opacity: 1;
+                            // }
                         }
                     }
                 }
@@ -308,14 +311,17 @@
         width: 100%;
         height:auto;
 
-        margin-top: -4rem;
+        // margin-top: -4rem;
+        margin-top: 0rem;
         z-index: 3;
         background-color: $color-white;
         box-shadow: 0 15px 20px -15px rgba(0,0,0,0.8),0 2000px 0 2000px rgba(0,0,0,0.4);
 
         opacity: 0;
+        height: 0;
         visibility: hidden;
         transition: 0.3s;
+        overflow: hidden;
 
         @media (max-width:$max-md) {
             margin-top: 0;
@@ -329,6 +335,8 @@
             opacity: 1;
             visibility: visible;
             padding:1.5rem 0;
+            margin-top: 0;
+            height: 92px;
             @media (max-width:$max-md) {
                 padding:1rem;
             }

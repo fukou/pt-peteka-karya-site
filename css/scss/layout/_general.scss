@@ -147,10 +147,10 @@ html {
 }
 
 .wrapper {
-  min-height: calc(100vh - 152px);
-  padding-top: 152px;
+  min-height: calc(100vh - 87px);
+  padding-top: 87px;
   @media (max-width: $max-md) {
-    padding-top: 89px;
+    padding-top: 85px;
   }
 
   &__hero {
