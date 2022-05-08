@@ -10,7 +10,7 @@ var app = {
         app.mobileToggle();
         app.mobileSubmenuToggle();
         app.localizationToggle();
-        app.numberCounter();
+        app.runCounter();
         app.aosAnimation();
         app.loadTabs();
         app.dummyMaps();
@@ -57,7 +57,7 @@ var app = {
     },
     numberCounter: () => {
         const counters = document.querySelectorAll('.value');
-        const speed = 500;
+        const speed = 200;
 
         counters.forEach( counter => {
         const animate = () => {
@@ -68,12 +68,23 @@ var app = {
             if(data < value) {
                 counter.innerText = Math.ceil(data + time);
                 setTimeout(animate, 1);
-            }else{
+            } else{
                 counter.innerText = value;
             }
         }
             animate();
         });
+    },
+    runCounter: () => {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                app.numberCounter();
+              }
+            });
+        });
+          
+        observer.observe(document.querySelector('.wrapper__key'));
     },
     aosAnimation: () => {
         AOS.init({
