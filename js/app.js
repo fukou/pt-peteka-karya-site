@@ -1,6 +1,6 @@
 /*
 Author: Faiz Ichsan Jaya
-Last updated: 30/4/2022
+Last updated: 8/5/2022
 
 */
 
@@ -11,6 +11,8 @@ var app = {
         app.mobileSubmenuToggle();
         app.localizationToggle();
         app.dummyMaps();
+        app.numberCounter();
+        app.aosAnimation();
     },
     searchToggle: () => {
        const btnSearch = document.querySelector('button[data-type-button="search"]');
@@ -64,6 +66,31 @@ var app = {
             tileSize: 512,
             zoomOffset: -1
 	    }).addTo(map);
+    },
+    numberCounter: () => {
+        const counters = document.querySelectorAll('.value');
+        const speed = 500;
+
+        counters.forEach( counter => {
+        const animate = () => {
+            const value = +counter.getAttribute('data-number');
+            const data = +counter.innerText;
+            
+            const time = value / speed;
+            if(data < value) {
+                counter.innerText = Math.ceil(data + time);
+                setTimeout(animate, 1);
+            }else{
+                counter.innerText = value;
+            }
+        }
+            animate();
+        });
+    },
+    aosAnimation: () => {
+        AOS.init({
+            once: true, // only animate once if `true`
+        });
     }
 };
   
