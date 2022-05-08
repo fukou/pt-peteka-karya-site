@@ -13,6 +13,31 @@
     }
 }
 
+.bg {
+    &-grey {
+        background-color: $color-light-grey!important;
+    }
+    &-white {
+        background-color: $color-white!important;
+    }
+    &-black {
+        background: $color-black!important;
+    }
+    &-primary {
+        background-color: $color-primary!important;
+    }
+    &-secondary {
+        background-color: $color-secondary!important;
+    }
+}
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+
 body {
     font-family: $font-body;
 }
@@ -25,8 +50,7 @@ body {
     }
 
     &__maps {
-        position: sticky;
-        top:0rem;
+        position: relative;
         height: 0;
         padding-bottom: 60vh;
         margin:0.15rem 0 0rem 0;
@@ -139,6 +163,22 @@ body {
                     padding: 2rem;
                     line-height: 1.6;
                 }
+            }
+        }
+    }
+    &__key {
+        :is(h1,h2,h3,h4,h5,h6,p,*) {
+            color:$color-white;
+        }
+        h1 {
+            font-size:3.25rem;
+        }
+        h2 {
+            font-size: 4rem;
+        }
+        .grid-item-key {
+            &-icon {
+                font-size: 10rem;
             }
         }
     }

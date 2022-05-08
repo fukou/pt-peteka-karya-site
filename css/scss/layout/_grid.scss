@@ -1,3 +1,7 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/screenwidth' as *;
+
 .flex {
     display: flex;
   
@@ -30,7 +34,51 @@
 }
 
 .grid {
-    display: grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($gridWidth, 1fr));
+  grid-gap: $gridGap;
 
+  & + .grid {
+    margin-top: $gridGap;
+  }
 
+  &-item {
+      position: relative;
+      &__image {
+          img {
+              width: 100%;
+          }
+      }
+      &__label {
+        position: absolute;
+        top: -20px;
+        left: 20px;
+        width: 40px;
+        height: 40px;
+        font-size: 30px;
+        line-height: 40px;
+        color: white;
+        z-index: 2;
+        border-radius: 50%;
+        text-align: center;
+
+        background-color: $color-primary;
+        &.yellow {
+            background-color: $color-yellow!important;
+        }
+        &.green {
+            background-color: $color-green!important;
+        }
+        &.blue {
+            background-color: $color-blue!important;
+        }
+        &.purple {
+            background-color: $color-purple!important;
+        }
+      }
+  }
+}
+
+.grid-wrap {
+  padding: $gridGap;
 }
