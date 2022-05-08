@@ -37,6 +37,11 @@
       integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
       crossorigin=""
     ></script>
+
+     <!-- tabs -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/cferdinandi/tabby@12.0.0/dist/css/tabby-ui.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/tabby@12.0.0/dist/js/tabby.polyfills.min.js"></script>
+
   </head>
   <body class="home">
     <!-- header -->
@@ -392,19 +397,37 @@
 
           <!-- 30% -->
           <div class="grid-item">
-            <div class="grid-item__title [ margin--bottom-15 ]">
-              <h1>Title</h1>
-            </div>
-            <div class="card">
-              <h2>Subtitle</h2>
-              <h3>More title</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Asperiores nam obcaecati dolor, amet quasi consectetur ipsum
-                autem temporibus et pariatur illo impedit ducimus atque sapiente
-                quidem perspiciatis. Eaque, nostrum quaerat. And with
-                <a href="#">link here</a>
-              </p>
+            <div class="space-y-md">
+               <div class="grid-sidebar">
+                    <div class="grid-item__title [ margin--bottom-15 ]">
+                        <h1>Title</h1>
+                    </div>
+                    <div class="card">
+                        <h2>Subtitle</h2>
+                        <h3>More title</h3>
+                        <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Asperiores nam obcaecati dolor, amet quasi consectetur ipsum
+                        autem temporibus et pariatur illo impedit ducimus atque sapiente
+                        quidem perspiciatis. Eaque, nostrum quaerat. And with
+                        <a href="#">link here</a>
+                        </p>
+                    </div>
+               </div>
+
+               <div class="grid-sidebar">
+                    <div class="grid-item__title [ margin--bottom-15 ]">
+                        <h1>More current news</h1>
+                    </div>
+                    <div class="card">
+                        <p>
+                        Amet quasi consectetur ipsum
+                        autem temporibus et pariatur illo impedit ducimus atque sapiente
+                        quidem perspiciatis. Eaque, nostrum quaerat. And with
+                        <a href="#">link here</a>
+                        </p>
+                    </div>
+                </div>
             </div>
           </div>
 
@@ -581,6 +604,32 @@
                 </div>
             </div>
           </section>
+      </div>
+
+       <!-- Ignore this, just to label stuff -->
+       <div class="container--width-xxl margin--x-auto margin--top-0">
+        <h1 class="color-black">Tabs</h1>
+      </div>
+      
+      <div class="wrapper__inner [ container--width-xxl ] [ margin--x-auto padding--y-50 ]">
+          <div class="wrapper__tabs">
+            <ul class="wrapper__tabs__menu" data-tabs>
+                <li><a href="#tabsone" data-tabby-default>Tabs 1</a></li>
+                <li><a href="#tabstwo">Tabs 2</a></li>
+                <li><a href="#tabsthree">Tabs 3</a></li>
+            </ul>
+            <div class="wrapper__tabs__content">
+                <div id="tabsone">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto dolor vel adipisci at alias quasi, iusto facilis officia ad? Quam totam porro deserunt eos beatae nesciunt distinctio inventore eius placeat iusto, voluptatum delectus magni incidunt expedita ab saepe aperiam ducimus asperiores perferendis accusamus pariatur veniam velit amet eaque.
+                </div>
+                <div id="tabstwo"> 
+                    Nam quae totam culpa laudantium aspernatur consectetur impedit voluptates cumque provident officiis placeat laboriosam rerum voluptatum, doloribus earum repellendus quam consequatur necessitatibus.
+                </div>
+                <div id="tabsthree"> 
+                    Quaerat eos sequi earum, aspernatur maiores recusandae, commodi eaque libero reprehenderit officia incidunt quae dolorum. Libero repudiandae est excepturi nihil laborum? Harum quasi tempore earum quod mollitia esse! Hic, voluptate?
+                </div>
+            </div>
+          </div>
       </div>
 
     </main>

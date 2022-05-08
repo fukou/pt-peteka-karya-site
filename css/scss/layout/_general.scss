@@ -142,6 +142,10 @@ body {
   font-family: $font-body;
 }
 
+html {
+    font-size: 14.75px;
+}
+
 .wrapper {
   min-height: calc(100vh - 152px);
   padding-top: 152px;
@@ -296,10 +300,63 @@ body {
       }
     }
   }
+  &__tabs {
+      &__menu {
+        border: 0!important;
+        display: flex;
+        align-items: center;
+        gap:0.25rem;
+        
+
+        height: 100%;
+        li {
+          a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+
+            padding: 0.65rem 1rem;
+
+            font-size: 1.175rem;
+            text-transform: uppercase;
+            
+            border-radius: 0;
+            border: 0!important;
+
+            
+            background-color: $color-light-grey;
+
+            @media (max-width:60rem) {
+                font-size: 1rem;
+            }
+
+            &:hover {
+                background-color: transparent;
+                color:darken($color-grey, 25%);
+            }
+
+            &[role="tab"] {
+              color:darken($color-grey, 25%);
+            }
+            &[aria-selected="true"] {
+              font-weight: bold;
+              background-color: $color-primary;
+              color:$color-white;
+            }
+          }
+        }
+      }
+      &__content {
+        background-color: $color-light-grey;
+        padding: 1.5rem;
+      }
+  }
 }
 
 .quick-finder {
-  background-color: $color-grey;
+  background-color: $color-light-grey;
   padding: 2rem;
   input[type="text"] {
     width: 100%;
@@ -308,7 +365,7 @@ body {
     border-radius: 6px;
   }
   &__buttons {
-    margin-top: 2.75rem;
+    margin-top: 1rem;
     gap: 1rem;
     @media (max-width: $max-md) {
       flex-direction: column;

@@ -10,9 +10,10 @@ var app = {
         app.mobileToggle();
         app.mobileSubmenuToggle();
         app.localizationToggle();
-        app.dummyMaps();
         app.numberCounter();
         app.aosAnimation();
+        app.loadTabs();
+        app.dummyMaps();
     },
     searchToggle: () => {
        const btnSearch = document.querySelector('button[data-type-button="search"]');
@@ -42,7 +43,6 @@ var app = {
     },
     mobileSubmenuToggle: () => {
         const submenu = document.querySelectorAll(".header ul > li.header__links__menu--item--has-submenu > a");
-        console.log(submenu);
         submenu.forEach(function(subs, index) {
             subs.insertAdjacentHTML('beforeend', '<span class="toggle"><i class="las la-angle-down"></i></span>');
 
@@ -51,21 +51,9 @@ var app = {
                 subs.querySelector('.toggle').parentElement.classList.toggle("is-active");
             })
         });
-        console.log("Berhasil...");
     },
     localizationToggle: () => {
 
-    },
-    dummyMaps: () => {
-        var map = L.map('map').setView([51.505, -0.09], 13);
-        var tiles = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-            maxZoom: 18,
-            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
-                'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-            id: 'mapbox/streets-v11',
-            tileSize: 512,
-            zoomOffset: -1
-	    }).addTo(map);
     },
     numberCounter: () => {
         const counters = document.querySelectorAll('.value');
@@ -91,7 +79,27 @@ var app = {
         AOS.init({
             once: true, // only animate once if `true`
         });
-    }
+    },
+    loadTabs: () => {
+       const isTabsExist = document.querySelector("[data-tabs");
+       if(typeof(isTabsExist) != 'undefined' && isTabsExist != null){
+          const tabs = new Tabby("[data-tabs]");
+       }
+    },
+    dummyMaps: () => {
+        const isMapExist = document.querySelector("#map");
+        if(typeof(isMapExist) != 'undefined' && isMapExist != null){
+            var map = L.map('map').setView([51.505, -0.09], 13);
+            var tiles = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+                maxZoom: 18,
+                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
+                    'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+                id: 'mapbox/streets-v11',
+                tileSize: 512,
+                zoomOffset: -1
+            }).addTo(map);
+        }
+    },
 };
   
 document.addEventListener("DOMContentLoaded", () => {

@@ -90,6 +90,12 @@
     grid-template-columns: 10 90%;
   }
 
+  @media (max-width:$max-md) {
+      &[class*="grid-"] {
+          grid-template-columns: 1fr;
+      }
+  }
+
   &-item {
       position: relative;
       &__image {
