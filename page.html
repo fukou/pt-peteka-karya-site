@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home &mdash; Document</title>
+    <title>Pages &mdash; Document</title>
     <!-- main style -->
     <link rel="stylesheet" href="/css/style.min.css">
 
@@ -105,78 +105,66 @@
 
     <!-- main content -->
     <main class="wrapper [ padding--bottom-5 ]">
-        <div class="wrapper__maps">
-            <div class="wrapper__maps__category">
-                <ul>
-                    <li><a href="#">Gas Storage</a></li>
-                    <li><a href="#">Petroleum Storage</a></li>
-                    <li><a href="#">Storage of Other Liquids</a></li>
-                    <li><a href="#">Fresh Water Supply</a></li>
-                    <li><a href="#">Mineral Water</a></li>
-                    <li><a href="#">Waste Management</a></li>
-                </ul>
-            </div>
-            <div id="map"></div>
+        <!-- Hero section -->
+        <div class="wrapper__hero" style="background-image: url('/img/hero.png');">
         </div>
-        <!-- top section -->
-        <div class="wrapper__inner [ container--width-xxl ] [ margin--x-auto ]">
-            <section class="wrapper__main [ padding--y-50 ]" data-aos="fade-up"  data-aos-duration="1500">
-                <h1>Sustainable Tank Storage Solutions</h1>
-                <h2>Around The Globe</h2>
-                <ul class="wrapper__main__menu">
-                    <li><a href="#">Gas Storage</a></li>
-                    <li><a href="#">Petroleum Storage</a></li>
-                    <li><a href="#">Storage of Other Liquids</a></li>
-                    <li><a href="#">Fresh Water Supply</a></li>
-                    <li><a href="#">Mineral Water</a></li>
-                    <li><a href="#">Waste Management</a></li>
-                </ul>
-            </section>
-            <section class="wrapper__main [ padding--bottom-50 ]" data-aos="fade-up"  data-aos-duration="1500">
-                <div class="wrapper__main__grid">
-                    <div class="wrapper__main__grid--cell">
-                        <h3>Terminal & Location Quickfinder</h3>
-                        <form action="#" class="quick-finder">
-                            <label for="quickfinder-autocomplete"></label>
-                            <div class="autocomplete-wrapper"><input type="text" class="terminal-autocomplete" data-json="/en/contact/locations-worldwide.json" id="quickfinder-autocomplete" placeholder="Terminal search" autocomplete="off"></div>
-    
-                            <div class="quick-finder__buttons [ flex ] [ flex--align-center ]">
-                              <a href="/en/business-areas-tank-storage-logistics-and-tank-terminals.html" class="btn">Terminal overview</a>
-                              <a href="/en/contact/locations-worldwide.html" class="btn">Locations Worldwide</a>
-                            </div>
-                          </form>
-                    </div>
-                    <div class="wrapper__main__grid--cell">
-                        <h3>Responsibility</h3>
-                        <div class="wrapper__main__grid--cell__bg">
-                            <p>
-                                We believe that only a management system based on the principles of sustainability will enable and secure the future of our business. Areas of focus include safety leadership & strong HSSE culture, environmental protection, operational excellence, our employees and surrounding communities. <a href="#" class="btn btn__link" data-icon-position="right">More <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="wrapper__main [ padding--bottom-50 ]" data-aos="fade-up"  data-aos-duration="1500">
-                <h1>We aim to be the independent logistics services partner of choice</h1>
-                <img class="[ margin--y-50 ]" src="/img/home.png" alt="">
-                <div class="card [ margin--y-20 ]">
-                    <h1>About us</h1>
-                    <h2>Our vision is to be the preferred partner in energy logistics.</h2>
-                    <p>Peteka Kara Tirta has been active in tank storage logistics since 1972, and is one of the largest independent operators of tank terminals for chemicals, gases and oils worldwide. The company owns and operates 41 terminals in 18 countries with a total storage capacity of 16 million cbm, on five continents – in Europe, North America, Latin America, the Middle East, Africa, India, and the Asia-Pacific region.</p>
-                    <div class="btn__wrapper [ margin--y-20 ]" data-wrapper-type="row">
-                        <a href="#" class="btn btn__primary">
-                            Overview
-                        </a>
-                        <a href="#" class="btn btn__primary">
-                            Parent Company
-                        </a>
-                        <a href="#" class="btn btn__primary">Strategic Approach</a>
-                        <a href="#" class="btn btn__primary">History</a>
-                    </div>
-                </div>
-            </section>
-            <section class="wrapper__main [ padding--bottom-50 ]" data-aos="fade-up"  data-aos-duration="1500">
-                <div class="grid">
+
+        <!-- Breadcrumbs -->
+        <nav aria-label="Breadcrumb" class="breadcrumb">
+            <div class="container--width-xxl  [ margin--x-auto ]">
+                <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                      <a href="/" itemprop="item">
+                        <span itemprop="name" class="sr-only">Home</span>
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                        </svg>
+                      </a>
+                      <meta itemprop="position" content="1" />
+                    </li>
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                      <a href="#" itemprop="item">
+                        <span itemprop="name">Products</span>
+                      </a>
+                      <meta itemprop="position" content="2" />
+                    </li>
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                      <a href="#" itemprop="item">
+                        <span itemprop="name">One of my categories</span>
+                      </a>
+                      <meta itemprop="position" content="3" />
+                    </li>
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                      <a href="#" itemprop="item">
+                        <span itemprop="name">A subcategory</span>
+                      </a>
+                      <meta itemprop="position" content="4" />
+                    </li>
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                      <span itemprop="item" aria-current="page">
+                        <span itemprop="name">About us</span>
+                      </span>
+                      <meta itemprop="position" content="5" />
+                    </li>
+                  </ol>
+            </div>
+        </nav>
+
+         <!-- Ignore this, just to label stuff -->
+         <div class="container--width-xxl margin--x-auto margin--top-35"><h1>Without sidebar</h1></div>
+          <!-- Ignore this, just to label stuff -->
+
+        <!-- Main Wrapper -->
+        <div class="wrapper__inner [ container--width-xxl ] [ margin--x-auto padding--y-50 ]">
+            <p>On these pages, you will find information about the company, our vision & mission, history and more</p>
+           
+            <!-- Main Wrapper setelah `wrapper__inner` -->
+            <section class="wrapper__main">
+
+                <!-- Ignore this, just to label stuff -->
+                <div class="container--width-xxl margin--x-auto margin--top-35"><h1 class="color-black">Grid item</h1></div>
+         
+                <div class="grid [ margin--y-40 ]">
                     <div class="grid-item">
                         <div class="grid-item__title [ margin--bottom-15 ]">
                             <h1>Corporate Movies</h1>
@@ -250,117 +238,48 @@
                         </div>
                     </div>
                 </div>
+
+
             </section>
+
+
         </div>
-        <!-- bottom section: for corporate citizen section-->
-        <div class="wrapper__inner bg-grey" data-aos="fade-up"  data-aos-duration="1500">
-            <section class="wrapper__main [ container--width-xxl ] [ margin--x-auto ] [ padding--y-60 ]">
-                <div class="grid">
-                    <div class="grid-item">
-                        <div class="grid-item__label green">
-                            <i class="las la-seedling"></i>
-                        </div>
-                        <div class="grid-item__image [ margin--bottom-30 ]">
-                            <img src="https://www.oiltanking.com/fileadmin/_processed_/d/f/csm_Corporate-Citizenship_Marquard-Bahls_SOS-Kinderdorf-Indien-2020_300x200px_208e6fc555.jpg" alt="">
-                        </div>
-                        <div class="grid-item__desc">
-                            <h1 class="margin--bottom-15">Title here</h1>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates veniam cumque, accusantium nam accusamus libero voluptas qui. Facere cum nostrum voluptates quam dolore sequi accusantium. Tempora eos voluptatem fugit adipisci.
-                            </p>
-                        </div>
-                        <div class="btn__wrapper [ margin--y-20 ]" data-wrapper-type="row">
-                            <a href="#" class="btn btn__primary--outline">
-                                See more
-                            </a>
-                        </div>
-                    </div>
 
-                    <div class="grid-item">
-                        <div class="grid-item__label purple">
-                            <i class="las la-book-open"></i>
-                        </div>
-                        <div class="grid-item__image [ margin--bottom-30 ]">
-                            <img src="https://www.oiltanking.com/fileadmin/_processed_/a/4/csm_2019_Oiltanking_Colombia_unterstuetzt_das_Back_to_Smile_Programm_connect_otcol_sonrier_eef76ae923.jpg" alt="">
-                        </div>
-                        <div class="grid-item__desc">
-                            <h1 class="margin--bottom-15">Title here</h1>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates veniam cumque, accusantium nam accusamus libero voluptas qui. Facere cum nostrum voluptates quam dolore sequi accusantium. Tempora eos voluptatem fugit adipisci.
-                            </p>
-                        </div>
-                        <div class="btn__wrapper [ margin--y-20 ]" data-wrapper-type="row">
-                            <a href="#" class="btn btn__primary--outline">
-                                See more
-                            </a>
-                        </div>
-                    </div>
+        <!-- Ignore this, just to label stuff -->
+        <div class="container--width-xxl margin--x-auto"><h1>With sidebar</h1></div>
+         <!-- Ignore this, just to label stuff -->
 
-                    <div class="grid-item">
-                        <div class="grid-item__label yellow">
-                            <i class="las la-first-aid"></i>
-                        </div>
-                        <div class="grid-item__image [ margin--bottom-30 ]">
-                            <img src="https://www.oiltanking.com/fileadmin/_processed_/e/a/csm_2020_IOT_eroeffnet_neuen_Open-Air-Fitnessbereich_fuer_Dorfbewohner_in_Indien_2019_iot_navghar_gym-shed-2_6f4d8211c2.jpg" alt="">
-                        </div>
-                        <div class="grid-item__desc">
-                            <h1 class="margin--bottom-15">Title here</h1>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates veniam cumque, accusantium nam accusamus libero voluptas qui. Facere cum nostrum voluptates quam dolore sequi accusantium. Tempora eos voluptatem fugit adipisci.
-                            </p>
-                        </div>
-                        <div class="btn__wrapper [ margin--y-20 ]" data-wrapper-type="row">
-                            <a href="#" class="btn btn__primary--outline">
-                                See more
-                            </a>
-                        </div>
-                    </div>
-
+        <div class="wrapper__inner [ container--width-xxl ] [ margin--x-auto padding--y-50 ]">
+            
+            <!-- grid: 70% left 30% right -->
+           <section class="wrapper__main [ grid grid-70-30 ]">
+                <!-- 70% -->
+                <div class="grid-item">
+                    <h1>Oiltanking as Tank Storage Logistics Provider</h1>
+                    <h2>Our Vision is to be the preferred partner in energy logistics</h2>
+                    <p>Oiltanking has been active in tank storage logistics since 1972, and is one of the largest independent operators of tank terminals for oils, gases and chemicals worldwide. The company owns and operates 41 terminals in 18 countries with a total storage capacity of more than 16 million cbm, on five continents – in Europe, North America, Latin America, the Middle East, Africa, India, and the Asia-Pacific region. In 2020, about 2,600 employees worked for Oiltanking.</p>
+                    <p>At the tank terminals, Oiltanking stores and handles nearly 500 different products including crude oil, petroleum products, biofuels, gases and chemicals. The total throughput of all terminals in 2019 was around 155 million tons.</p>
+                    <p> Oiltanking is not the owner of the goods stored, but merely provides its services in the field of tank storage logistics. Our clients include private and state oil companies, refiners, petrochemical companies, and traders in petroleum products and chemicals.</p>
+                    <p> Often we develop and operate our business with reputable local, private and state-owned companies, whereby Oiltanking acts as operating partner in the joint venture. In developing capital-intensive terminal facilities alone – or with substantial local business partners – the financial strength of parent company Marquard & Bahls AG is a valuable resource.</p>
+                    <p>To further improve our shareholders value we continue to employ a strategy of controlled growth of our tank terminal-based service network through acquisitions, new buildings and upgrading of existing facilities.</p>
+                    <p>Oiltanking has a strong customer orientation and provides tailor-made infrastructure. Its focus is on safe, efficient and reliable services in constructing and operating its facilities.</p>
+                    <p>Besides tank storage, Oiltanking is active in the engineering, procurement and construction (EPC) of tank terminals.</p>
                 </div>
-            </section>
-        </div>
-        <!-- bottom section: key facts -->
-        <div class="wrapper__inner bg-primary" data-aos="fade-up"  data-aos-duration="1500">
-            <section class="wrapper__main [ container--width-xxl ] [ margin--x-auto ] [ padding--y-60 ]">
-                <div class="wrapper__key">
-                    <h1>Key facts</h1>
-                    <div class="grid [ margin--y-40 ]">
-                        <div class="grid-item-key">
-                            <h2 class="value" data-number="41">0</h2>
-                            <p>terminals in 18 countries</p>
 
-                            <div class="grid-item-key-icon">
-                                <i class="las la-globe"></i>
-                            </div>
-                        </div>
-                        <div class="grid-item-key">
-                            <h2 class="value" data-number="16">0</h2>
-                            <p>million cbm storage capacity</p>
-
-                            <div class="grid-item-key-icon">
-                                <i class="las la-oil-can"></i>
-                            </div>
-                        </div>
-                        <div class="grid-item-key">
-                            <h2 class="value" data-number="155">0</h2>
-                            <p>million tons total throughput</p>
-
-                            <div class="grid-item-key-icon">
-                                <i class="las la-tint"></i>
-                            </div>
-                        </div>
-                        <div class="grid-item-key">
-                            <h2 class="value" data-number="2900">0</h2>
-                            <p>employees worldwide</p>
-
-                            <div class="grid-item-key-icon">
-                                <i class="las la-users"></i>
-                            </div>
-                        </div>
+                <!-- 30% -->
+                <div class="grid-item">
+                    <div class="grid-item__title [ margin--bottom-15 ]">
+                        <h1>Title</h1>
+                    </div>
+                    <div class="card">
+                        <h2>Subtitle</h2>
+                        <h3>More title</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nam obcaecati dolor, amet quasi consectetur ipsum autem temporibus et pariatur illo impedit ducimus atque sapiente quidem perspiciatis. Eaque, nostrum quaerat. And with <a href="#">link here</a></p>
                     </div>
                 </div>
-            </section>
+           </section>
         </div>
+
     </main>
 
     <!-- footer -->
