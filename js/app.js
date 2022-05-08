@@ -76,15 +76,19 @@ var app = {
         });
     },
     runCounter: () => {
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                app.numberCounter();
-              }
+        const isKeyExist = document.querySelector('.wrapper__key');
+        if(typeof(isKeyExist) != 'undefined' && isKeyExist != null) {
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                  if (entry.isIntersecting) {
+                    app.numberCounter();
+                  }
+                });
             });
-        });
-          
-        observer.observe(document.querySelector('.wrapper__key'));
+              
+            observer.observe(document.querySelector('.wrapper__key'));
+        }
     },
     aosAnimation: () => {
         AOS.init({
