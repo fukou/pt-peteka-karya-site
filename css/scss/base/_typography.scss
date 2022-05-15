@@ -1,0 +1,29 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/screenwidth" as *;
+
+h1 {
+    &.is-bg {
+        position: relative;
+        background-color: $color-secondary;
+        color:$color-white!important;
+
+        width: max-content;
+        padding:1rem 3rem;
+        border-radius:6px 35px 0 0px;
+
+        &::after {
+            content:'';
+            position: absolute;
+            right:-67px;
+            top:8px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 60px 0 0 80px;
+            border-color: transparent transparent transparent $color-secondary;
+            @media (max-width:$max-md) {
+                border-width: 60px 0 0 80px;
+            }
+        }
+    }
+}
