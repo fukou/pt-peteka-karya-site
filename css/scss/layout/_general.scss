@@ -290,9 +290,12 @@ html {
     &__sticky {
       > img {
         position: sticky;
-        top:0;
+        top:97px;
         width: 100%;
         height: auto;
+        @media (max-width:$max-md) {
+          top:90px;
+        }
       }
     }
   }
