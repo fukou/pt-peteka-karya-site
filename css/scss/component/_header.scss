@@ -89,6 +89,17 @@
                 display: none;
             }
         }
+
+        
+        &--white {
+            background-color: $color-white;
+            &::after {
+                border-color: transparent transparent transparent $color-white;
+            }
+            span {
+                color:$color-secondary;
+            }
+        }
     }
 
     &__action {
@@ -120,6 +131,9 @@
                 height: 2.65rem;
             }
         } 
+        a {
+            color:$color-white;
+        }
         button {
             &[data-type-button="language"] {
                 @media (max-width:$max-md) {

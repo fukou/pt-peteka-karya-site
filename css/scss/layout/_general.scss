@@ -150,10 +150,10 @@ html {
 }
 
 .wrapper {
-  min-height: calc(100vh - 87px);
-  padding-top: 87px;
+  min-height: calc(100vh - 97px);
+  padding-top: 97px;
   @media (max-width: $max-md) {
-    padding-top: 85px;
+    padding-top: 90px;
   }
 
   &__hero {
@@ -390,6 +390,41 @@ html {
         background-color: $color-light-grey;
         padding: 1.5rem;
       }
+
+      &--teaser {
+        .wrapper__tabs__menu {
+          gap:0rem;
+          li {
+            flex-grow: 1;
+            a {
+              &[aria-selected=true] {
+                background-color: #ececec;
+                color:#111;
+              }
+            }
+          }
+        }
+        .wrapper__tabs__content {
+          height: calc(100vh - 146px);
+          background-color: $color-white;
+          padding: 0;
+        }
+        .wrapper__hero {
+
+          height: calc(100vh - 141px);
+
+          @media (max-width:$max-md) {
+            height: calc(100vh - 130px);
+          }
+          &__inner {
+            color:$color-white;
+            
+            max-width: 60rem;
+            padding:0 1.75rem;
+            margin:0 auto;
+          }
+        }
+      }
   }
   &__achievements {
     display: grid;
@@ -431,6 +466,144 @@ html {
         background-color: $color-yellow;
       }
     }
+  }
+  &__teaser {
+    position: relative;
+    padding-top: 97px;
+    min-height: calc(100vh - 0px);
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    padding: 3rem;
+
+    @media (max-width:$max-md) {
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+    &__image {
+      position: absolute;
+      left:0;
+      top:0;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      gap:3rem;
+
+      width: 100%;
+      height: 100vh;
+      z-index: 3;
+
+      &-item {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2.5rem;
+
+        border-radius: 50%;
+        background-color: rgba($color-grey-dark, 0.15);
+
+        img {
+          max-width: 20ch;
+          @media (max-width:$max-md) {
+            max-width: 9ch;
+          }
+        }
+      }
+    }
+
+    &__menu {
+      position: absolute;
+      left: 0ch;
+      bottom: 0ch;
+      padding: 0ch;
+      z-index: 4;
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+          + * {
+            margin-top: 1rem;
+          }
+          a {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            background-color: $color-primary;
+            color: $color-white;
+
+            border-radius: 0 30px 0 0;
+            font-size: 1.25rem;
+
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 0.75rem 2.75rem 0.75rem 1.75rem;
+          }
+        }
+      }
+      
+      @media (max-width:$max-md) {
+        left:0ch;
+        bottom:0ch;
+        top:90px;
+
+        ul {
+          display: flex;
+          li {
+            + * {
+              margin-top: 0;
+            }
+            a {
+              font-size: 0.85rem;
+              border-radius: 0;
+              background-color: #ececec;
+              color:$color-black;
+            }
+          }
+        }
+      }
+    }
+    
+    .countdown-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      border:1px solid rgba($color-grey-dark, 0.5);
+      background-color: $color-white;
+      
+      z-index: 3;
+    }
+    
+    .big-text {
+        font-weight: bold;
+        font-size: 3.5rem;
+        line-height: 1;
+        margin: 1rem 2rem;
+
+        color:$color-primary;
+        @media (max-width:$max-md) {
+          font-size: 1.5rem;
+        }
+    }
+    
+    .countdown-el {
+        padding-bottom: 1rem;
+        text-align: center;
+        + * {
+          border-left:1px solid rgba($color-grey-dark, 0.5);
+        }
+    }
+    
+    .countdown-el span {
+        font-size: 1rem;
+    }
+  
   }
 }
 
