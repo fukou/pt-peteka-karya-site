@@ -15,6 +15,8 @@ var app = {
         app.loadTabs();
         app.dummyMaps();
         app.countDownTimer();
+        app.tinySlider();
+        app.chatBox();
     },
     searchToggle: () => {
        let btnSearch = document.querySelector('button[data-type-button="search"]');
@@ -125,37 +127,99 @@ var app = {
         }
     },
     countDownTimer: () => {
-        const daysEl = document.getElementById("days");
-        const hoursEl = document.getElementById("hours");
-        const minsEl = document.getElementById("mins");
-        const secondsEl = document.getElementById("seconds");
+        const isCountdownExist = document.querySelector('.countdown-container');
+        if(typeof(isCountdownExist) != 'undefined' && isCountdownExist != null) {
+            const daysEl = document.getElementById("days");
+            const hoursEl = document.getElementById("hours");
+            const minsEl = document.getElementById("mins");
+            const secondsEl = document.getElementById("seconds");
 
-        const newYears = "1 July 2022";
+            const newYears = "1 July 2022";
 
-        function countdown() {
-            const newYearsDate = new Date(newYears);
-            const currentDate = new Date();
+            function countdown() {
+                const newYearsDate = new Date(newYears);
+                const currentDate = new Date();
 
-            const totalSeconds = (newYearsDate - currentDate) / 1000;
+                const totalSeconds = (newYearsDate - currentDate) / 1000;
 
-            const days = Math.floor(totalSeconds / 3600 / 24);
-            const hours = Math.floor(totalSeconds / 3600) % 24;
-            const mins = Math.floor(totalSeconds / 60) % 60;
-            const seconds = Math.floor(totalSeconds) % 60;
+                const days = Math.floor(totalSeconds / 3600 / 24);
+                const hours = Math.floor(totalSeconds / 3600) % 24;
+                const mins = Math.floor(totalSeconds / 60) % 60;
+                const seconds = Math.floor(totalSeconds) % 60;
 
-            daysEl.innerHTML = days;
-            hoursEl.innerHTML = formatTime(hours);
-            minsEl.innerHTML = formatTime(mins);
-            secondsEl.innerHTML = formatTime(seconds);
+                daysEl.innerHTML = days;
+                hoursEl.innerHTML = formatTime(hours);
+                minsEl.innerHTML = formatTime(mins);
+                secondsEl.innerHTML = formatTime(seconds);
+            }
+
+            function formatTime(time) {
+                return time < 10 ? `0${time}` : time;
+            }
+
+            // initial call
+            countdown();
+            setInterval(countdown, 1000);
         }
-
-        function formatTime(time) {
-            return time < 10 ? `0${time}` : time;
+    },
+    tinySlider: (container = '.slideshow', items = 1, autoplay = true, autoplayButton = false, gutter = 30) => {
+        if(typeof(container) != 'undefined' && container != null) {
+            var slider = tns({
+                container: container,
+                items: items,
+                slideBy: 'page',
+                autoplay: autoplay,
+                autoplayButton: autoplayButton,
+                gutter: gutter,
+                responsive: {
+                    920: {
+                        items:3
+                    }
+                }
+            });
         }
+    },
+    chatBox: () => {
+        const isChatboxExist = document.querySelector('.chatbox');
+        if(typeof(isChatboxExist) != 'undefined' && isChatboxExist != null) {
+            const toggleChatboxBtn = document.querySelector(".js-chatbox-toggle");
+            const chatbox = document.querySelector(".js-chatbox");
+            const chatboxMsgDisplay = document.querySelector(".js-chatbox-display");
+            const chatboxForm = document.querySelector(".js-chatbox-form");
 
-        // initial call
-        countdown();
-        setInterval(countdown, 1000);
+            // Use to create chat bubble when user submits text
+            // Appends to display
+            const createChatBubble = input => {
+                const chatSection = document.createElement("p");
+                chatSection.textContent = input;
+                chatSection.classList.add("chatbox__display-chat");
+
+                chatboxMsgDisplay.appendChild(chatSection);
+            };
+
+            // Toggle the visibility of the chatbox element when clicked
+            // And change the icon depending on visibility
+            toggleChatboxBtn.addEventListener("click", () => {
+            chatbox.classList.toggle("chatbox--is-visible");
+
+                if (chatbox.classList.contains("chatbox--is-visible")) {
+                    toggleChatboxBtn.innerHTML = '<i class="las la-angle-down"></i>';
+                } else {
+                    toggleChatboxBtn.innerHTML = '<i class="las la-angle-up"></i>';
+                }
+            });
+
+            // Form input using method createChatBubble
+            // To append any user message to display
+            // chatboxForm.addEventListener("submit", e => {
+            //     const chatInput = document.querySelector(".js-chatbox-input").value;
+
+            //     createChatBubble(chatInput);
+
+            //     e.preventDefault();
+            //     chatboxForm.reset();
+            // });
+        }
     }
 };
   

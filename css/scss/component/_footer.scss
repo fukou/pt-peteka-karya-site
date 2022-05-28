@@ -126,6 +126,9 @@
             @media (max-width:$max-md) {
                 flex-direction: column;
             } 
+            > div {
+                flex-grow: 1;
+            }
         }
 
         &__logo {

@@ -19,6 +19,10 @@
     <!-- aos animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <!-- tiny sliders -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.helper.ie8.js"></script><![endif]-->
+
     <!-- dummy maps -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
     integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
@@ -105,10 +109,10 @@
 
     <header class="header">
         <div class="header__inner [ margin--x-auto ] [ flex ] [ flex--align-center ] [ flex--justify-between ]">
-          <a class="header__logo [ flex ] [ flex--align-center ]" href="/">
-            <img src="./img/logo 1.png" alt="" />
-            <span class="margin--left-20">PETEKA <br> KARYA TIRTA</span>
-          </a>
+            <a class="header__logo header__logo--white [ flex ] [ flex--align-center ]" href="/">
+                <img src="../img/logo.png" alt="" />
+                <span class="margin--left-20">PETEKA <br> KARYA TIRTA</span>
+              </a>
           <div class="header__navigation [ flex ] [ flex--align-center ]">
             
             <nav class="header__links [ container--width-xxxl ] [ margin--x-auto ]">
@@ -238,7 +242,7 @@
       
     <!-- main content -->
     <main class="wrapper [ padding--bottom-5 ]">
-        <div class="wrapper__maps">
+        <div class="wrapper__maps" style="background-image: url('/img/peta-indonesia.png');background-size:cover;background-position:center;">
             <div class="wrapper__maps__category">
                 <ul>
                     <li><a href="#">Gas Storage</a></li>
@@ -249,7 +253,7 @@
                     <li><a href="#">Waste Management</a></li>
                 </ul>
             </div>
-            <div id="map"></div>
+            <!-- <div id="map"></div> -->
         </div>
         <!-- top section -->
         <div class="wrapper__inner">
@@ -384,49 +388,81 @@
 
                 <h1 class="is-bg margin--y-50">Corporate Movies</h1>
 
-                <div class="grid">
-                    <div class="grid-item">
-                        <div class="grid-item__image">
-                            <img src=" https://via.placeholder.com/950x600">
-                        </div>
-                        <div class="card">
-                            <div class="line-clamp">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, beatae voluptatibus laborum autem illo harum tempore optio et rerum, ducimus quos reprehenderit cum? Ipsum molestias, harum magni voluptates natus eius.
+                <div class="slideshow-outer">
+                    <div class="slideshow">
+                        <div class="grid-item">
+                            <div class="grid-item__image">
+                                <img src=" https://via.placeholder.com/950x600">
                             </div>
-                            <div class="btn__wrapper [ margin--y-20 ]" data-wrapper-type="row">
-                                <a href="#" class="btn btn__primary">
-                                    See more
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="grid-item__image">
-                            <img src="https://via.placeholder.com/950x600">
-                        </div>
-                        <div class="card">
-                            <div class="line-clamp">
-                                Dicta distinctio est in doloribus, debitis quibusdam sapiente soluta atque facere minus laboriosam vitae quasi dolorem asperiores quos similique, laudantium illum enim temporibus explicabo recusandae corrupti. Cumque quam unde tempora?
-                            </div>
-                            <div class="btn__wrapper [ margin--y-20 ]" data-wrapper-type="row">
-                                <a href="#" class="btn btn__primary">
-                                    See more
-                                </a>
+                            <div class="card">
+                                <div class="line-clamp">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, beatae voluptatibus laborum autem illo harum tempore optio et rerum, ducimus quos reprehenderit cum? Ipsum molestias, harum magni voluptates natus eius.
+                                </div>
+                                <div class="btn__wrapper [ margin--y-20 ]" data-wrapper-type="row">
+                                    <a href="#" class="btn btn__primary">
+                                        See more
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="grid-item">
-                        <div class="grid-item__image">
-                            <img src=" https://via.placeholder.com/950x600">
-                        </div>
-                        <div class="card">
-                            <div class="line-clamp">
-                                Obcaecati error quos, esse facilis quis vel eum? Vero non a veniam debitis animi ad distinctio possimus magnam earum error maiores voluptate quidem quisquam ullam, illum quod labore id nemo.
+                        <div class="grid-item">
+                            <div class="grid-item__image">
+                                <img src="https://via.placeholder.com/950x600">
                             </div>
-                            <div class="btn__wrapper [ margin--y-20 ]" data-wrapper-type="row">
-                                <a href="#" class="btn btn__primary">
-                                    See more
-                                </a>
+                            <div class="card">
+                                <div class="line-clamp">
+                                    Dicta distinctio est in doloribus, debitis quibusdam sapiente soluta atque facere minus laboriosam vitae quasi dolorem asperiores quos similique, laudantium illum enim temporibus explicabo recusandae corrupti. Cumque quam unde tempora?
+                                </div>
+                                <div class="btn__wrapper [ margin--y-20 ]" data-wrapper-type="row">
+                                    <a href="#" class="btn btn__primary">
+                                        See more
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div class="grid-item__image">
+                                <img src=" https://via.placeholder.com/950x600">
+                            </div>
+                            <div class="card">
+                                <div class="line-clamp">
+                                    Obcaecati error quos, esse facilis quis vel eum? Vero non a veniam debitis animi ad distinctio possimus magnam earum error maiores voluptate quidem quisquam ullam, illum quod labore id nemo.
+                                </div>
+                                <div class="btn__wrapper [ margin--y-20 ]" data-wrapper-type="row">
+                                    <a href="#" class="btn btn__primary">
+                                        See more
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div class="grid-item__image">
+                                <img src=" https://via.placeholder.com/950x600">
+                            </div>
+                            <div class="card">
+                                <div class="line-clamp">
+                                    Obcaecati error quos, esse facilis quis vel eum? Vero non a veniam debitis animi ad distinctio possimus magnam earum error maiores voluptate quidem quisquam ullam, illum quod labore id nemo.
+                                </div>
+                                <div class="btn__wrapper [ margin--y-20 ]" data-wrapper-type="row">
+                                    <a href="#" class="btn btn__primary">
+                                        See more
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-item">
+                            <div class="grid-item__image">
+                                <img src=" https://via.placeholder.com/950x600">
+                            </div>
+                            <div class="card">
+                                <div class="line-clamp">
+                                    Obcaecati error quos, esse facilis quis vel eum? Vero non a veniam debitis animi ad distinctio possimus magnam earum error maiores voluptate quidem quisquam ullam, illum quod labore id nemo.
+                                </div>
+                                <div class="btn__wrapper [ margin--y-20 ]" data-wrapper-type="row">
+                                    <a href="#" class="btn btn__primary">
+                                        See more
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -624,12 +660,42 @@
                     <img src="/img/logo 1.png" alt="">
                     <span>PETEKA <br> KARYA TIRTA</span>
                 </div>
+                <div>
+                    <!-- div kosong agar logo PTK di tengah -->
+                </div>
             </div>
         </div>
     </footer>
 
+    <!-- chatbox -->
+    <section class="chatbox js-chatbox">
+        <div class="chatbox__header">
+          <h3 class="chatbox__header-cta-text">
+                <span class="chatbox__header-cta-icon">
+                    <i class="las la-comment-alt"></i>
+                </span>
+                <span>Let's chat</span>
+          </h3>
+          <button class="js-chatbox-toggle chatbox__header-cta-btn u-btn"><i class="las la-angle-up"></i></button>
+        </div>
+        <!-- End of .chatbox__header -->
+        <div class="js-chatbox-display chatbox__display">
+      
+        </div>
+        <!-- End of .chatbox__display -->
+        <form class="js-chatbox-form chatbox__form">
+          <input type="text" class="js-chatbox-input chatbox__form-input" placeholder="Type your message..." required>
+          <button class="chatbox__form-submit u-btn"><i class="lab la-telegram-plane"></i></button>
+        </form>
+        <!-- End of .chatbox__form -->
+      </section>
+    <!-- End of .chatbox -->
+
     <!-- aos animation -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- tiny sliders -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
 
     <!-- main js -->
     <script src="js/app.js"></script>    
