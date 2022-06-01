@@ -2,9 +2,11 @@
 @use "../abstracts/screenwidth" as *;
 
 .slideshow-outer {
-    @media (max-width:$max-md) {
-        padding:0 15px;
-    }
+    padding:0 50px;
+}
+
+.tns-ovh {
+    padding: 30px 0;
 }
 
 .tns-outer {

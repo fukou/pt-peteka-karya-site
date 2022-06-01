@@ -164,18 +164,20 @@ var app = {
     },
     tinySlider: (container = '.slideshow', items = 1, autoplay = true, autoplayButton = false, gutter = 30) => {
         if(typeof(container) != 'undefined' && container != null) {
-            var slider = tns({
-                container: container,
-                items: items,
-                slideBy: 'page',
-                autoplay: autoplay,
-                autoplayButton: autoplayButton,
-                gutter: gutter,
-                responsive: {
-                    920: {
-                        items:3
+            document.querySelectorAll(container).forEach(slider => {
+                tns({
+                    container: slider,
+                    items: items,
+                    slideBy: 'page',
+                    autoplay: autoplay,
+                    autoplayButton: autoplayButton,
+                    gutter: gutter,
+                    responsive: {
+                        920: {
+                            items:3
+                        }
                     }
-                }
+                });
             });
         }
     },
