@@ -64,7 +64,16 @@ var app = {
         });
     },
     localizationToggle: () => {
+       let btnLang = document.querySelector('button[data-type-button="language"]');
+       const listLanguage = document.querySelector('button[data-type-button="language"] > .language');
+       
+       const isButtonExist = btnLang;
+       if(typeof(isButtonExist) != 'undefined' && isButtonExist != null) {
 
+        btnLang.addEventListener("click", function() {
+         listLanguage.classList.toggle("is-shown");
+        });
+       }
     },
     numberCounter: () => {
         const counters = document.querySelectorAll('.value');
@@ -174,7 +183,7 @@ var app = {
                     gutter: gutter,
                     responsive: {
                         920: {
-                            items:3
+                            items:4
                         }
                     }
                 });

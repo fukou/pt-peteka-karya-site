@@ -19,6 +19,10 @@
         color:lighten($color-black, 45%)!important;
     }
 
+    p, .line-clamp {
+        font-size: 0.95rem;
+    }
+
     &__image {
         &__grid {
             display: grid;

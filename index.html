@@ -118,7 +118,7 @@
             <nav class="header__links [ container--width-xxxl ] [ margin--x-auto ]">
                 <ul class="header__links__menu [ flex ] [ flex--align-center ]">
                   <li
-                    class="header__links__menu--item header__links__menu--item--has-submenu"
+                    class="header__links__menu--item--active header__links__menu--item header__links__menu--item--has-submenu"
                   >
                     <a href="#">About us</a>
                     <ul class="header__links__submenu">
@@ -177,7 +177,26 @@
                 </div>
               </nav>
             <div class="header__action [ flex ] [ flex--align-center ]">
-              <button data-type-button="language">EN</button>
+              <button data-type-button="language">
+                  EN
+                  <ul class="language">
+                    <li>
+                        <a href="/" hreflang="de-DE" title="Deutsch">
+                            DE
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/" class="is-active" hreflang="en-US" title="english">
+                            EN
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/" hreflang="es-ES" title="spanisch">
+                            ES
+                        </a>
+                    </li>
+                </ul>
+              </button>
               <button data-type-button="search">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
