@@ -6,6 +6,7 @@ Last updated: 8/5/2022
 
 var app = {
     init: function () {
+        app.headerScroll();
         app.searchToggle();
         app.mobileToggle();
         app.mobileSubmenuToggle();
@@ -17,6 +18,24 @@ var app = {
         app.countDownTimer();
         app.tinySlider();
         app.chatBox();
+    },
+    headerScroll: () => {
+        let scrollpos = window.scrollY;
+        const header = document.querySelector(".header");
+        const header_height = header.offsetHeight;
+ 
+        const add_class_on_scroll = () => header.classList.add("fade-in");
+        const remove_class_on_scroll = () => header.classList.remove("fade-in");
+ 
+        window.addEventListener("scroll", function () {
+         scrollpos = window.scrollY;
+ 
+         if (scrollpos >= header_height) {
+             add_class_on_scroll();
+         } else {
+             remove_class_on_scroll();
+         }
+       });
     },
     searchToggle: () => {
        let btnSearch = document.querySelector('button[data-type-button="search"]');

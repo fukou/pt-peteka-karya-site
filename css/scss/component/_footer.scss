@@ -3,14 +3,16 @@
 @use '../abstracts/screenwidth' as *;
 
 .footer {
-    background-color: $color-primary;
+    background-color: $color-secondary;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     
     &__socmed {
-        background-color: $color-light-grey;
+        background-color: $color-secondary;
+        color:$color-white;
         // padding-left: calc((100% - 1320px)/2);
         // padding-right: calc((100% - 1320px)/2);
-
-        border-bottom: 5px solid $color-white;
 
         span {
             flex:0 0 20%;
@@ -32,6 +34,7 @@
                     margin-left: 1.25rem;
                 }
                 a {
+                    color:$color-white;
                     display: inline-flex;
                     align-items: center;
                     justify-content: center;
@@ -39,10 +42,11 @@
                         width: 24px;
                         height: 24px;
                         transition: 0.5s;
+                        fill:$color-white;
                     }
                     &:hover {
                         svg {
-                            fill:$color-primary;
+                            fill:$color-white;
                         }
                     }
                 }
@@ -110,7 +114,7 @@
     }
 
     &__copyright {
-        background-color: $color-secondary;
+        // background-color: $color-secondary;
         color:$color-white;
 
         @media (max-width:$max-md) {

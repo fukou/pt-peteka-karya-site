@@ -151,9 +151,9 @@ html {
 
 .wrapper {
   min-height: calc(100vh - 95px);
-  padding-top: 95px;
+  // padding-top: 95px;
   @media (max-width: $max-md) {
-    padding-top: 90px;
+    // padding-top: 90px;
   }
 
   &__hero {
@@ -170,8 +170,8 @@ html {
   &__maps {
     position: relative;
     height: 0;
-    padding-bottom: calc(100vh - 90px);
-    margin: 0.15rem 0 0rem 0;
+    padding-bottom: calc(100vh - 0px);
+    margin: 0rem 0 0rem 0;
 
     #map {
       position: absolute;
@@ -202,8 +202,8 @@ html {
           a {
             display: inline-flex;
             align-items: center;
-            background-color: $color-primary;
-            color: $color-white;
+            background-color: $color-white;
+            color: $color-secondary;
 
             border-radius: 8px;
             font-size: 0.85rem;

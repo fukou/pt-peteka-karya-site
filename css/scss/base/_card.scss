@@ -3,7 +3,7 @@
 @use '../abstracts/screenwidth' as *;
 
 .card {
-    background-color: $color-light-grey;
+    background-color: $color-white;
     padding:1rem 2rem;
 
     :is(h1,h2,h3,h4,h5,h6,p) {
