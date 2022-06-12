@@ -14,6 +14,14 @@
 }
 
 .bg {
+  &-full {
+    position: absolute;
+    inset:0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
   &-grey {
     background-color: $color-light-grey !important;
   }
@@ -31,6 +39,10 @@
   }
   &-secondary {
     background-color: $color-secondary !important;
+    &-gradient {
+      background: rgb(57,89,147);
+      background: linear-gradient(104deg, rgba(57,89,147,1) 0%, rgba(0,18,45,1) 57%, rgba(68,139,184,1) 100%); 
+    }
   }
 }
 
@@ -429,8 +441,12 @@ html {
       }
   }
   &__achievements {
+    position: relative;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(600px,1fr));
+    gap:3rem;
+
+    z-index: 2;
     
     &--item {
       display: flex;
@@ -453,7 +469,7 @@ html {
 
     &--year {
       flex-grow: 1;
-      padding:5rem 2.5rem;
+      padding:5rem 0rem;
       
       color:$color-white;
 

@@ -31,6 +31,10 @@
   
     @include just-align('align','align-items', $align-positions);
     @include just-align('justify','justify-content', $justify-positions);
+
+    &-column {
+      flex-direction: column;
+    }
 }
 
 .grid {
