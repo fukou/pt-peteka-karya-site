@@ -1,0 +1,95 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/screenwidth' as *;
+
+.btn {
+    &__wrapper {
+        display: flex;
+        align-items: center;
+
+        // margin:1.5rem 0;
+
+        &[data-wrapper-type="row"] {
+            flex-direction: row;
+
+            gap:1rem;
+
+            @media (max-width:60rem) {
+                flex-wrap: wrap;
+            }
+        }
+        &[data-wrapper-type="column"] {
+            flex-direction: column;
+        }
+    }
+
+    display: inline-flex;
+    align-items: center;
+
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-style: normal;
+    text-decoration: none;
+    cursor: pointer;
+
+    word-break: normal;
+
+    border-radius: 6px;
+    transition: 0.4s;
+
+    &[data-icon-position="left"] {
+        svg, i {
+            margin-right: 0.35rem;
+        }
+    }
+
+    &[data-icon-position="right"] {
+        svg, i {
+            margin-left: 0.35rem;
+        }
+    }
+
+    &__full {
+        width: 100%;
+        justify-content: center;
+    }
+
+    &__link {
+        color:rgba($color-primary, 1);
+        padding-top: 0;
+        padding-bottom:0;
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
+    }
+
+    &__primary {
+        background-color: rgba($color-primary, 1);
+        color:rgba($color-white, 1);
+        &:hover {
+            background-color: darken($color-primary, 20%);
+        }
+
+        &--outline {
+            background-color: transparent;
+            border:1px solid rgba($color-primary, 1);
+            color:rgba($color-primary, 1);
+            &:hover {
+                background-color: rgba($color-primary, 1);
+                color:rgba($color-white, 1); 
+            }
+        }
+    }
+
+    &__secondary {
+        background-color: rgba($color-secondary, 1);
+        color:rgba($color-white, 1);
+        &:hover {
+            background-color: darken($color-secondary, 20%);
+        }
+    }
+}

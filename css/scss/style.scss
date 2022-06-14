@@ -10,6 +10,10 @@
 
 @use './base/button';
 @use './base/reset';
+@use './base/card';
+@use './base/typography';
+@use './base/slideshow';
+@use './base/chatbox';
 
 @use './layout/general';
 @use './layout/container';
@@ -17,3 +21,4 @@
 @use './layout/spacing';
 
 @use './component/header';
+@use './component/footer';

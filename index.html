@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.min.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Nunito:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Poppins:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
-    />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home &mdash; Document</title>
+    <!-- main style -->
+    <link rel="stylesheet" href="css/style.min.css">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Nunito:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Poppins:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet"> 
+
+    <!-- font icons -->
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+    <!-- aos animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- tiny sliders -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.helper.ie8.js"></script><![endif]-->
 
     <!-- dummy maps -->
     <link
@@ -33,194 +39,587 @@
   <body class="home">
     <!-- header -->
     <header class="header">
-      <div
-        class="header__inner [ container--width-xxxl ] [ margin--x-auto ] [ flex ] [ flex--align-center ] [ flex--justify-between ]"
-      >
-        <div class="header__logo [ flex ] [ flex--align-center ]">
-          <img src="img/logo.png" alt="" />
-          <span class="margin--left-20">PT PETEKA KARYA TIRTA</span>
+        <div class="header__inner [ margin--x-auto ] [ flex ] [ flex--align-center ] [ flex--justify-between ]">
+            <a class="header__logo [ flex ] [ flex--align-center ]" href="/">
+                <img src="img/logo 1.png" alt="" />
+                <span class="margin--left-20">PETEKA <br> KARYA TIRTA</span>
+              </a>
+            <div class="header__navigation [ flex ] [ flex--align-center ]">
+                
+                <nav class="header__links [ container--width-xxxl ] [ margin--x-auto ]">
+                    <ul class="header__links__menu [ flex ] [ flex--align-center ]">
+                    <li
+                        class="header__links__menu--item--active header__links__menu--item header__links__menu--item--has-submenu"
+                    >
+                        <a href="#">About us</a>
+                        <ul class="header__links__submenu">
+                        <li class="header__links__submenu--item">
+                            <a href="#">Who We Are</a>
+                        </li>
+                        <li class="header__links__submenu--item">
+                            <a href="#">Strategic Approach</a>
+                        </li>
+                        <li class="header__links__submenu--item">
+                            <a href="#">Corporate Movies</a>
+                        </li>
+                        <li class="header__links__submenu--item">
+                            <a href="#">History</a>
+                        </li>
+                        <li class="header__links__submenu--item">
+                            <a href="#">Investment</a>
+                        </li>
+                        <li class="header__links__submenu--item">
+                            <a href="#">Career</a>
+                        </li>
+                        <li class="header__links__submenu--item">
+                            <a href="#">Parent Company</a>
+                        </li>
+                        </ul>
+                    </li>
+                    <li class="header__links__menu--item">
+                        <a href="#">Business Areas</a>
+                    </li>
+                    <li class="header__links__menu--item">
+                        <a href="#">Responsibility</a>
+                    </li>
+                    <li class="header__links__menu--item">
+                        <a href="#">News & Info</a>
+                    </li>
+                    <li class="header__links__menu--item"><a href="#">Contact</a></li>
+                    </ul>
+                    <div class="header__addon">
+                    <ul class="language">
+                        <li>
+                        <a href="/de/home.html" hreflang="de-DE" title="Deutsch">
+                            Deutsch
+                        </a>
+                        </li>
+                        <li>
+                        <a href="/en/home.html" hreflang="en-US" title="english">
+                            English
+                        </a>
+                        </li>
+                        <li>
+                        <a href="/es/home.html" hreflang="es-ES" title="spanisch">
+                            Español
+                        </a>
+                        </li>
+                    </ul>
+                    </div>
+                </nav>
+               
+            </div>
+            <div class="header__pertamina" style="background-image: url('img/peteka\ line\ line.png');background-size:cover;">
+                <img src="img/pertamina-logo.png" alt="">
+            </div>
         </div>
-        <div class="header__action [ flex ] [ flex--align-center ]">
-          <button data-type-button="language">EN</button>
-          <button data-type-button="search">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <circle cx="11" cy="11" r="8"></circle>
-              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            </svg>
-          </button>
-          <button data-type-button="hamburger">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <line x1="3" y1="12" x2="21" y2="12"></line>
-              <line x1="3" y1="6" x2="21" y2="6"></line>
-              <line x1="3" y1="18" x2="21" y2="18"></line>
-            </svg>
-          </button>
+  
+        <div class="header__search">
+          <form action="" class="[ flex ] [ flex--align-center ] [ container--width-xxxl ] [ margin--x-auto ]">
+            <input type="search" name="" id="" placeholder="Search term" />
+            <div>
+              <button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+              </button>
+            </div>
+          </form>
         </div>
-      </div>
-
-      <nav class="header__navigation [ flex ] [ flex--align-center ]">
-        <div class="header__links [ container--width-xxxl ] [ margin--x-auto ]">
-          <ul class="header__links__menu [ flex ] [ flex--align-center ]">
-            <li
-              class="header__links__menu--item header__links__menu--item--has-submenu"
-            >
-              <a href="#">About us</a>
-              <ul class="header__links__submenu">
-                <li class="header__links__submenu--item">
-                  <a href="#">Who We Are</a>
-                </li>
-                <li class="header__links__submenu--item">
-                  <a href="#">Strategic Approach</a>
-                </li>
-                <li class="header__links__submenu--item">
-                  <a href="#">Corporate Movies</a>
-                </li>
-                <li class="header__links__submenu--item">
-                  <a href="#">History</a>
-                </li>
-                <li class="header__links__submenu--item">
-                  <a href="#">Investment</a>
-                </li>
-                <li class="header__links__submenu--item">
-                  <a href="#">Career</a>
-                </li>
-                <li class="header__links__submenu--item">
-                  <a href="#">Parent Company</a>
-                </li>
-              </ul>
-            </li>
-            <li class="header__links__menu--item">
-              <a href="#">Business Areas</a>
-            </li>
-            <li class="header__links__menu--item">
-              <a href="#">Responsibility</a>
-            </li>
-            <li class="header__links__menu--item">
-              <a href="#">News & Info</a>
-            </li>
-            <li class="header__links__menu--item"><a href="#">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
     </header>
+    
+    
+    <!-- Lamguage and Search button -->
+    <div class="header__action [ flex ] [ flex--align-center ]">
+        <button data-type-button="language">
+            EN
+            <ul class="language">
+                <li>
+                    <a href="/" hreflang="de-DE" title="Deutsch">
+                        DE
+                    </a>
+                </li>
+                <li>
+                    <a href="/" class="is-active" hreflang="en-US" title="english">
+                        EN
+                    </a>
+                </li>
+                <li>
+                    <a href="/" hreflang="es-ES" title="spanisch">
+                        ES
+                    </a>
+                </li>
+            </ul>
+        </button>
+        <button data-type-button="search">
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            >
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+        </button>
+        <button data-type-button="hamburger">
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            >
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+    </div>
+
 
     <!-- main content -->
-    <main class="wrapper [ padding--bottom-30 ]">
-      <div class="wrapper__maps">
-        <div class="wrapper__maps__category">
-          <ul>
-            <li><a href="#">Gas Storage</a></li>
-            <li><a href="#">Petroleum Storage</a></li>
-            <li><a href="#">Storage of Other Liquids</a></li>
-            <li><a href="#">Fresh Water Supply</a></li>
-            <li><a href="#">Mineral Water</a></li>
-            <li><a href="#">Waste Management</a></li>
-          </ul>
+    <main class="wrapper [ padding--bottom-5 ]">
+        <div class="wrapper__maps" style="background-image: url('img/hero-img.png');background-size:cover;background-position:center;">
+            <div class="wrapper__maps__category">
+                <ul>
+                    <li><a href="#">Gas Storage</a></li>
+                    <li><a href="#">Petroleum Storage</a></li>
+                    <li><a href="#">Storage of Other Liquids</a></li>
+                    <li><a href="#">Fresh Water Supply</a></li>
+                    <li><a href="#">Mineral Water</a></li>
+                    <li><a href="#">Waste Management</a></li>
+                </ul>
+            </div>
         </div>
-        <div id="map"></div>
-      </div>
-      <section
-        class="wrapper__main [ container--width-xxxl ] [ margin--x-auto ] [ padding--y-20 ]"
-      >
-        <h1>Sustainable Tank Storage Solutions</h1>
-        <h2>Around The Globe</h2>
-        <ul class="wrapper__main__menu">
-          <li><a href="#">Gas Storage</a></li>
-          <li><a href="#">Petroleum Storage</a></li>
-          <li><a href="#">Storage of Other Liquids</a></li>
-          <li><a href="#">Fresh Water Supply</a></li>
-          <li><a href="#">Mineral Water</a></li>
-          <li><a href="#">Waste Management</a></li>
-        </ul>
-      </section>
-      <section
-        class="wrapper__main [ container--width-xxxl ] [ margin--x-auto ] [ padding--y-50 ]"
-      >
-        <div class="wrapper__main__grid">
-          <div class="wrapper__main__grid--cell">
-            <h3>Terminal & Location Quickfinder</h3>
-            <form action="#" class="quick-finder">
-              <label for="quickfinder-autocomplete"></label>
-              <div class="autocomplete-wrapper">
-                <input
-                  type="text"
-                  class="terminal-autocomplete"
-                  data-json="/en/contact/locations-worldwide.json"
-                  id="quickfinder-autocomplete"
-                  placeholder="Terminal search"
-                  autocomplete="off"
-                />
-              </div>
+        <!-- top section -->
+        <div class="wrapper__inner">
+            <section class="wrapper__main [ padding--y-50 ] bg-secondary-gradient" data-aos="fade-up"  data-aos-duration="1500">
+                <div class="bg-full" style="background-image: url('img/bg-decorative.png');"></div>
+                <div class=" [ container--width-xxl ] [ margin--x-auto ]">
+                    <h1 class="is-bg margin--bottom-30 color-white">Achievements</h1>
+                    <div class="wrapper__achievements">
+                        <div class="wrapper__achievements--item">
+                            <div class="wrapper__achievements--year">
+                                <h2>2005</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, minima iure! Unde, quo hic reiciendis odio saepe laborum neque esse placeat inventore vitae dignissimos magnam asperiores facere a tempora eum.</p>
+                            </div>
+                        </div>
 
-              <div
-                class="quick-finder__buttons [ flex ] [ flex--align-center ]"
-              >
-                <a
-                  href="/en/business-areas-tank-storage-logistics-and-tank-terminals.html"
-                  class="btn"
-                  >Terminal overview</a
-                >
-                <a href="/en/contact/locations-worldwide.html" class="btn"
-                  >Locations Worldwide</a
-                >
+                        <div class="wrapper__achievements--item">
+                            <div class="wrapper__achievements--year">
+                            <h2>2010</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, minima iure! Unde, quo hic reiciendis odio saepe laborum neque esse placeat inventore vitae dignissimos magnam asperiores facere a tempora eum.</p>
+                            </div>
+                        </div>
+
+                        <div class="wrapper__achievements--item">
+                            <div class="wrapper__achievements--year">
+                            <h2>2015</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, minima iure! Unde, quo hic reiciendis odio saepe laborum neque esse placeat inventore vitae dignissimos magnam asperiores facere a tempora eum.</p>
+                            </div>
+                        </div>
+
+                        <div class="wrapper__achievements--item">
+                            <div class="wrapper__achievements--year">
+                            <h2>2020</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, minima iure! Unde, quo hic reiciendis odio saepe laborum neque esse placeat inventore vitae dignissimos magnam asperiores facere a tempora eum.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="wrapper__main padding--y-50" data-aos="fade-up"  data-aos-duration="1500" style="background-image: url('img/bg-keyfacts.png');background-size: cover;background-repeat: no-repeat;">
+                <div class="bg-full" style="background-image: url('img/bg-decorative.png');"></div>
+                <div class="container--width-xxl margin--x-auto">
+
+                    <h1 class="is-bg color-white">Key facts</h1>
+                    <div class="wrapper__key__circle [ margin--y-50 ]">
+                        <div class="grid">
+                            <div class="grid-item">
+                                More than <span>33</span> years of experiences
+                            </div>
+                            <div class="grid-item">
+                                The most strategic position in the world's ocean lane
+                            </div>
+                            <div class="grid-item">
+                                <span>34</span> Terminals and Harbors in <span>13</span> islands
+                            </div>
+                            <div class="grid-item">
+                                <span>1235</span>
+                                employees in 126  working areas around country
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="wrapper__main padding--y-90 flex flex-column flex--align-center flex--justify-end" data-aos="fade-up"  data-aos-duration="1500" style="min-height:800px; background-image: url('img/bg-terminal.png');background-size: cover;background-repeat: no-repeat;">
+
+                <div class="[ container--width-xxl ] [ margin--x-auto ]">
+                    <div class="grid">
+                        <div class="grid-item">
+                            <form action="#" class="quick-finder">
+                                <div class="quick-finder__input"><input type="text" class="terminal-autocomplete" id="quickfinder-autocomplete" placeholder="Terminal Location Quickfinder" autocomplete="off"></div>
+        
+                                <div class="quick-finder__buttons [ flex ] [ flex--align-center ]">
+                                  <a href="#" class="btn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                  </svg></a>
+                                </div>
+                              </form>
+                              <div class="card">
+                                <p>PKT focuses its efforts on ensuring the agility of your logistics in inclusive manner with respect to five
+                                    key principles, i.e. availability, accessibility, affordability, acceptability and sustainability</p>
+                                <div class="btn__wrapper [ margin--y-20 ]" data-wrapper-type="row">
+                                    <a href="#" class="btn btn__primary">
+                                        Overview
+                                    </a>
+                                    <a href="#" class="btn btn__primary">
+                                        Parent Company
+                                    </a>
+                                    <a href="#" class="btn btn__primary">Strategic Approach</a>
+                                    <a href="#" class="btn btn__primary">History</a>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+               
+
+            </section>
+
+            <section class="wrapper__main padding--y-50 [ container--width-xxl ] [ margin--x-auto ]" data-aos="fade-up"  data-aos-duration="1500">
+                <h1>We aim to be the independent logistics services partner of choice</h1>
+            </section>
+
+            <section class="wrapper__main wrapper__main__sticky" data-aos="fade-up"  data-aos-duration="1500">
+                <img src="img/home.png" alt="">
+                <img src="https://images.unsplash.com/photo-1520475178495-a8d5b36f1782?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1156&q=80" alt="">
+                <img src="https://images.unsplash.com/photo-1519092437326-bfd121eb53ae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="">
+            </section>
+
+            <section class="wrapper__main padding--y-50 [ margin--x-auto ] bg-grey" data-aos="fade-up"  data-aos-duration="1500" style="background-image: url('img/bg-decorative-black.png');background-size: cover;background-repeat: no-repeat;">
+            
+                <div class="container--width-xxl margin--x-auto">
+                    <h1 class="is-bg margin--y-50">Corporate Movies</h1>
+
+                    <div class="slideshow-outer">
+                        <div class="slideshow">
+                            <div class="grid-item">
+                                <div class="grid-item__image">
+                                    <img src=" https://via.placeholder.com/950x600">
+                                </div>
+                                <div class="card">
+                                    <div class="line-clamp">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, beatae voluptatibus laborum autem illo harum tempore optio et rerum, ducimus quos reprehenderit cum? Ipsum molestias, harum magni voluptates natus eius.
+                                    </div>
+                                    <div class="btn__wrapper [ margin--y-20 ]" data-wrapper-type="row">
+                                        <a href="#" class="btn btn__primary">
+                                            See more
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item">
+                                <div class="grid-item__image">
+                                    <img src="https://via.placeholder.com/950x600">
+                                </div>
+                                <div class="card">
+                                    <div class="line-clamp">
+                                        Dicta distinctio est in doloribus, debitis quibusdam sapiente soluta atque facere minus laboriosam vitae quasi dolorem asperiores quos similique, laudantium illum enim temporibus explicabo recusandae corrupti. Cumque quam unde tempora?
+                                    </div>
+                                    <div class="btn__wrapper [ margin--y-20 ]" data-wrapper-type="row">
+                                        <a href="#" class="btn btn__primary">
+                                            See more
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item">
+                                <div class="grid-item__image">
+                                    <img src=" https://via.placeholder.com/950x600">
+                                </div>
+                                <div class="card">
+                                    <div class="line-clamp">
+                                        Obcaecati error quos, esse facilis quis vel eum? Vero non a veniam debitis animi ad distinctio possimus magnam earum error maiores voluptate quidem quisquam ullam, illum quod labore id nemo.
+                                    </div>
+                                    <div class="btn__wrapper [ margin--y-20 ]" data-wrapper-type="row">
+                                        <a href="#" class="btn btn__primary">
+                                            See more
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item">
+                                <div class="grid-item__image">
+                                    <img src=" https://via.placeholder.com/950x600">
+                                </div>
+                                <div class="card">
+                                    <div class="line-clamp">
+                                        Obcaecati error quos, esse facilis quis vel eum? Vero non a veniam debitis animi ad distinctio possimus magnam earum error maiores voluptate quidem quisquam ullam, illum quod labore id nemo.
+                                    </div>
+                                    <div class="btn__wrapper [ margin--y-20 ]" data-wrapper-type="row">
+                                        <a href="#" class="btn btn__primary">
+                                            See more
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid-item">
+                                <div class="grid-item__image">
+                                    <img src=" https://via.placeholder.com/950x600">
+                                </div>
+                                <div class="card">
+                                    <div class="line-clamp">
+                                        Obcaecati error quos, esse facilis quis vel eum? Vero non a veniam debitis animi ad distinctio possimus magnam earum error maiores voluptate quidem quisquam ullam, illum quod labore id nemo.
+                                    </div>
+                                    <div class="btn__wrapper [ margin--y-20 ]" data-wrapper-type="row">
+                                        <a href="#" class="btn btn__primary">
+                                            See more
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+
+            <section class="wrapper__main padding--y-90" style="background-image: url('img/bg-invest.png');background-size: cover;background-repeat: no-repeat;">
+
+              <div class="container--width-xxl margin--x-auto">
+                    <h1 class="is-bg margin--bottom-50 color-white">Investments</h1>
+
+                    <div class="card__image card__image__grid">
+                        <div class="card__image__embed">
+                            <img src="https://images.unsplash.com/photo-1568234928966-359c35dd8327?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fGludmVzdG1lbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60" alt="">
+                        </div>
+                       <div class="card__image__embed">
+                            <img src="https://images.unsplash.com/photo-1633158829585-23ba8f7c8caf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGludmVzdG1lbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60" alt="">
+                       </div>
+                    </div>
+                    <div class="card">
+                        <p>PKT focuses its efforts on ensuring the agility of your logistics in
+                            inclusive manner with respect to five key principles, i.e. availability,
+                            accessibility, affordability, acceptability and sustainability</p>
+                        <div class="btn__wrapper [ margin--y-20 ]" data-wrapper-type="row">
+                            <a href="#" class="btn btn__primary">
+                                Business Portfolio
+                            </a>
+                            <a href="#" class="btn btn__primary">
+                                Contact Us
+                            </a>
+                        </div>
+                    </div>
               </div>
-            </form>
-          </div>
-          <div class="wrapper__main__grid--cell">
-            <h3>Responsibility</h3>
-            <p>
-              We believe that only a management system based on the principles
-              of sustainability will enable and secure the future of our
-              business. Areas of focus include safety leadership & strong HSSE
-              culture, environmental protection, operational excellence, our
-              employees and surrounding communities. more
-            </p>
-          </div>
+                
+            </section>
         </div>
-      </section>
+        <!-- bottom section: for corporate citizen section-->
+        <div class="wrapper__inner bg-grey" style="background-image: url('img/bg-decorative-black.png');background-size: cover;background-repeat: no-repeat;">
+            <section class="wrapper__main [ container--width-xxl ] [ margin--x-auto ] [ padding--y-60 ]">
+                
+                <h1 class="is-bg margin--bottom-50">News</h1>
+                <div class="slideshow-outer">
+                    <div class="slideshow">
+                        <div class="grid-item">
+                            <div class="grid-item__label green">
+                                <i class="las la-seedling"></i>
+                            </div>
+                            <div class="grid-item__image [ margin--bottom-30 ]">
+                                <img src="https://www.oiltanking.com/fileadmin/_processed_/d/f/csm_Corporate-Citizenship_Marquard-Bahls_SOS-Kinderdorf-Indien-2020_300x200px_208e6fc555.jpg" alt="">
+                            </div>
+                            <div class="grid-item__desc">
+                                <h1 class="margin--bottom-15">Title here</h1>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates veniam cumque, accusantium nam accusamus libero voluptas qui. Facere cum nostrum voluptates quam dolore sequi accusantium. Tempora eos voluptatem fugit adipisci.
+                                </p>
+                            </div>
+                            <div class="btn__wrapper [ margin--y-20 ]" data-wrapper-type="row">
+                                <a href="#" class="btn btn__primary--outline">
+                                    See more
+                                </a>
+                            </div>
+                        </div>
+    
+                        <div class="grid-item">
+                            <div class="grid-item__label purple">
+                                <i class="las la-book-open"></i>
+                            </div>
+                            <div class="grid-item__image [ margin--bottom-30 ]">
+                                <img src="https://www.oiltanking.com/fileadmin/_processed_/a/4/csm_2019_Oiltanking_Colombia_unterstuetzt_das_Back_to_Smile_Programm_connect_otcol_sonrier_eef76ae923.jpg" alt="">
+                            </div>
+                            <div class="grid-item__desc">
+                                <h1 class="margin--bottom-15">Title here</h1>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates veniam cumque, accusantium nam accusamus libero voluptas qui. Facere cum nostrum voluptates quam dolore sequi accusantium. Tempora eos voluptatem fugit adipisci.
+                                </p>
+                            </div>
+                            <div class="btn__wrapper [ margin--y-20 ]" data-wrapper-type="row">
+                                <a href="#" class="btn btn__primary--outline">
+                                    See more
+                                </a>
+                            </div>
+                        </div>
+    
+                        <div class="grid-item">
+                            <div class="grid-item__label yellow">
+                                <i class="las la-first-aid"></i>
+                            </div>
+                            <div class="grid-item__image [ margin--bottom-30 ]">
+                                <img src="https://www.oiltanking.com/fileadmin/_processed_/e/a/csm_2020_IOT_eroeffnet_neuen_Open-Air-Fitnessbereich_fuer_Dorfbewohner_in_Indien_2019_iot_navghar_gym-shed-2_6f4d8211c2.jpg" alt="">
+                            </div>
+                            <div class="grid-item__desc">
+                                <h1 class="margin--bottom-15">Title here</h1>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates veniam cumque, accusantium nam accusamus libero voluptas qui. Facere cum nostrum voluptates quam dolore sequi accusantium. Tempora eos voluptatem fugit adipisci.
+                                </p>
+                            </div>
+                            <div class="btn__wrapper [ margin--y-20 ]" data-wrapper-type="row">
+                                <a href="#" class="btn btn__primary--outline">
+                                    See more
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="grid-item">
+                            <div class="grid-item__label yellow">
+                                <i class="las la-first-aid"></i>
+                            </div>
+                            <div class="grid-item__image [ margin--bottom-30 ]">
+                                <img src="https://via.placeholder.com/950x600" alt="">
+                            </div>
+                            <div class="grid-item__desc">
+                                <h1 class="margin--bottom-15">Title here</h1>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates veniam cumque, accusantium nam accusamus libero voluptas qui. Facere cum nostrum voluptates quam dolore sequi accusantium. Tempora eos voluptatem fugit adipisci.
+                                </p>
+                            </div>
+                            <div class="btn__wrapper [ margin--y-20 ]" data-wrapper-type="row">
+                                <a href="#" class="btn btn__primary--outline">
+                                    See more
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 
-    <footer class="footer">
-      <div class="footer__inner">
-        <div class="footer__menu"></div>
-      </div>
+    <!-- footer -->
+    <footer class="footer" style="background-image: url('img/bg-decorative.png');">
+        <div class="footer__socmed [ padding--y-20 ]">
+          <div class="footer__socmed__inner [ flex ] [ flex--align-center ] [ container--width-xxl ] [ margin--x-auto ]">
+            <span>Follow us</span>
+            <ul class="[ flex ] [ flex--align-center ]">
+                <li><a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#000"><path d="M16.98 0a6.9 6.9 0 0 1 5.08 1.98A6.94 6.94 0 0 1 24 7.02v9.96c0 2.08-.68 3.87-1.98 5.13A7.14 7.14 0 0 1 16.94 24H7.06a7.06 7.06 0 0 1-5.03-1.89A6.96 6.96 0 0 1 0 16.94V7.02C0 2.8 2.8 0 7.02 0h9.96zm.05 2.23H7.06c-1.45 0-2.7.43-3.53 1.25a4.82 4.82 0 0 0-1.3 3.54v9.92c0 1.5.43 2.7 1.3 3.58a5 5 0 0 0 3.53 1.25h9.88a5 5 0 0 0 3.53-1.25 4.73 4.73 0 0 0 1.4-3.54V7.02a5 5 0 0 0-1.3-3.49 4.82 4.82 0 0 0-3.54-1.3zM12 5.76c3.39 0 6.2 2.8 6.2 6.2a6.2 6.2 0 0 1-12.4 0 6.2 6.2 0 0 1 6.2-6.2zm0 2.22a3.99 3.99 0 0 0-3.97 3.97A3.99 3.99 0 0 0 12 15.92a3.99 3.99 0 0 0 3.97-3.97A3.99 3.99 0 0 0 12 7.98zm6.44-3.77a1.4 1.4 0 1 1 0 2.8 1.4 1.4 0 0 1 0-2.8z"/></svg>
+                </a></li>
+                <li><a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#000"><path d="M22.23 0H1.77C.8 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.2 0 22.23 0zM7.27 20.1H3.65V9.24h3.62V20.1zM5.47 7.76h-.03c-1.22 0-2-.83-2-1.87 0-1.06.8-1.87 2.05-1.87 1.24 0 2 .8 2.02 1.87 0 1.04-.78 1.87-2.05 1.87zM20.34 20.1h-3.63v-5.8c0-1.45-.52-2.45-1.83-2.45-1 0-1.6.67-1.87 1.32-.1.23-.11.55-.11.88v6.05H9.28s.05-9.82 0-10.84h3.63v1.54a3.6 3.6 0 0 1 3.26-1.8c2.39 0 4.18 1.56 4.18 4.89v6.21z"/></svg>
+                </a></li>
+                <li><a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#000"><path d="M12.04 3.5c.59 0 7.54.02 9.34.5a3.02 3.02 0 0 1 2.12 2.15C24 8.05 24 12 24 12v.04c0 .43-.03 4.03-.5 5.8A3.02 3.02 0 0 1 21.38 20c-1.76.48-8.45.5-9.3.51h-.17c-.85 0-7.54-.03-9.29-.5A3.02 3.02 0 0 1 .5 17.84c-.42-1.61-.49-4.7-.5-5.6v-.5c.01-.9.08-3.99.5-5.6a3.02 3.02 0 0 1 2.12-2.14c1.8-.49 8.75-.51 9.34-.51zM9.54 8.4v7.18L15.82 12 9.54 8.41z"/></svg>
+                </a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__inner [ container--width-xxl ] [ margin--x-auto ] [ padding--y-30 ]">
+            <div class="footer__links">
+                <ul class="footer__links__menu [ flex ] [ flex--justify-center ]">
+                    <li class="footer__links__menu--item footer__links__menu--item--has-submenu">
+                        <a href="#">About us</a>
+                        <ul class="footer__links__menu">
+                            <li class="footer__links__menu--item--submenu"><a href="#">Who We Are</a></li>
+                            <li class="footer__links__menu--item--submenu"><a href="#">Strategic Approach</a></li>
+                            <li class="footer__links__menu--item--submenu"><a href="#">Corporate Movies</a></li>
+                            <li class="footer__links__menu--item--submenu"><a href="#">History</a></li>
+                            <li class="footer__links__menu--item--submenu"><a href="#">Investment</a></li>
+                            <li class="footer__links__menu--item--submenu"><a href="#">Career</a></li>
+                            <li class="footer__links__menu--item--submenu"><a href="#">Parent Company</a></li>
+                        </ul>
+                    </li>
+                    <li class="footer__links__menu--item"><a href="#">Business Areas</a></li>
+                    <li class="footer__links__menu--item"><a href="#">Responsibility</a></li>
+                    <li class="footer__links__menu--item"><a href="#">News & Info</a></li>
+                    <li class="footer__links__menu--item"><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="footer__copyright [ padding--y-30 ]">
+            <div class="[ container--width-xxl ] [ margin--x-auto ]">
+                <div class="footer__copyright__text">
+                    Copyright &copy; PKT2022. All right reserved.
+                </div>
+                <div class="footer__copyright__logo">
+                    <img src="img/logo 1.png" alt="">
+                    <span>PETEKA <br> KARYA TIRTA</span>
+                </div>
+                <div>
+                    <!-- div kosong agar logo PTK di tengah -->
+                </div>
+            </div>
+        </div>
     </footer>
 
-    <script src="js/app.js"></script>
-    <script>
-      var map = L.map("map").setView([51.505, -0.09], 13);
-      var tiles = L.tileLayer(
-        "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw",
-        {
-          maxZoom: 18,
-          attribution:
-            'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
-            'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-          id: "mapbox/streets-v11",
-          tileSize: 512,
-          zoomOffset: -1,
-        }
-      ).addTo(map);
-    </script>
-  </body>
+    <!-- chatbox -->
+    <section class="chatbox js-chatbox">
+        <div class="chatbox__header">
+          <h3 class="chatbox__header-cta-text">
+                <span class="chatbox__header-cta-icon">
+                    <i class="las la-comment-alt"></i>
+                </span>
+                <span>Let's chat</span>
+          </h3>
+          <button class="js-chatbox-toggle chatbox__header-cta-btn u-btn"><i class="las la-angle-up"></i></button>
+        </div>
+        <!-- End of .chatbox__header -->
+        <div class="js-chatbox-display chatbox__display">
+      
+        </div>
+        <!-- End of .chatbox__display -->
+        <form class="js-chatbox-form chatbox__form">
+          <input type="text" class="js-chatbox-input chatbox__form-input" placeholder="Type your message..." required>
+          <button class="chatbox__form-submit u-btn"><i class="lab la-telegram-plane"></i></button>
+        </form>
+        <!-- End of .chatbox__form -->
+      </section>
+    <!-- End of .chatbox -->
+
+    <!-- aos animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- tiny sliders -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+
+    <!-- main js -->
+    <script src="js/app.js"></script>    
+</body>
 </html>

@@ -1,0 +1,14 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/screenwidth" as *;
+
+h1 {
+    &.is-bg {
+        position: relative;
+        color:$color-secondary;
+
+        width: max-content;
+        border-bottom: 3px solid $color-primary;
+
+        padding-bottom: 1rem;
+    }
+}

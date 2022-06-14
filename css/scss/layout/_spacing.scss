@@ -1,5 +1,40 @@
+$gapProperties: (
+    ('space-y-', 'margin-top', '> * + *'),
+    ('space-x-', 'margin-left', '> * + *')
+);
+
+$gapOptions: (
+  'xs' : 0.5rem,
+  'sm' : 1rem,
+  'md' : 2rem,
+  'xl' : 3rem
+);
+
+@mixin generateUtilityClasses($properties, $options) {
+    @each $item in $properties {
+      $classPropertyText: nth($item, 1);
+      $cssProperty: nth($item, 2);
+      $selectorAdditional: nth($item, 3);
+      @each $classValueText, $cssValue in $options {
+        .#{$classPropertyText}#{$classValueText} #{$selectorAdditional} {
+          #{$cssProperty}: $cssValue;
+        }
+      }
+    }
+}
+
+@include generateUtilityClasses($gapProperties, $gapOptions);
+
 .margin--x-auto {
     margin:0 auto;
+}
+
+.margin--left-auto {
+    margin-left: auto;
+}
+
+.margin--right-auto {
+    margin-left: auto;
 }
 
 .margin--right-, .margin--x- {
