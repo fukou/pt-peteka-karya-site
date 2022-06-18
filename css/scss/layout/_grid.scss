@@ -101,8 +101,25 @@
       grid-template-columns: 1fr;
   }
 
+  &.is-quick-search {
+    .grid-item {
+      text-align: center;
+
+      .btn__wrapper[data-wrapper-type="row"] {
+        justify-content: center;
+      }
+    }
+  }
+
   &-item {
       position: relative;
+      ul {
+        li {
+          + li {
+            margin-top: 1rem;
+          }
+        }
+      }
       &__image {
           img {
               width: 100%;
