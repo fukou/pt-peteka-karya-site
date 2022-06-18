@@ -21,7 +21,7 @@
                 filter:invert(100%)
             }
             span {
-                color:$color-secondary;
+                color:$color-black;
             }
         }
         .header__links {
@@ -145,11 +145,11 @@
     &__action {
         position: absolute;
         right:5ch;
-        top:14.75ch;
-        z-index: 2;
+        top:3.5ch;
+        z-index: 200;
 
         flex-direction: column;
-        gap:1rem;
+        gap:2rem;
         button[data-type-button] {
             appearance: none;
             border:0;
@@ -184,8 +184,8 @@
                 @media (max-width:$max-md) {
                     display: none;
                 }
-                padding:0;
-                border:0;
+                // padding:0;
+                // border:0;
 
                 position: relative;
                 ul.language {
@@ -241,6 +241,9 @@
             &[data-type-button="search"] {
                 @media (max-width:$max-md) {
                     display: none;
+                }
+                &.is-changed {
+                    color:$color-secondary;
                 }
             }
         }
@@ -375,7 +378,7 @@
                     padding:0.75rem 1rem;
                     border-radius: 6px;
 
-                    font-size: 1rem;
+                    font-size: 1.15rem;
 
                     text-decoration: none;
                     transition: 0.3s;
