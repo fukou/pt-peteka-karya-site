@@ -229,7 +229,7 @@ html {
 
     &__preview {
       position: absolute;
-      right: 15ch;
+      right:3ch;
       top:13ch;
 
       max-width: 300px;
@@ -476,8 +476,10 @@ html {
   &__achievements {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(600px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
     gap:3rem;
+    padding-top: 3rem;
+    padding-bottom: 8rem;
 
     @media (max-width:$max-md) {
       grid-template-columns: 1fr;
@@ -485,6 +487,18 @@ html {
     }
 
     z-index: 2;
+
+    &--icon {
+      background-color: $color-secondary;
+      width: 150px;
+      height: 150px;
+      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      margin-bottom: 1rem;
+    }
     
     &--item {
       display: flex;
@@ -524,6 +538,21 @@ html {
       @media (max-width:$max-md) {
         padding:1rem 0;
       }
+    }
+  }
+  &__choose {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:1rem;
+
+    @media (max-width:$max-md) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    &--item {
+
     }
   }
   &__teaser {

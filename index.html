@@ -37,8 +37,7 @@
     <header class="header">
         <div class="header__inner [ margin--x-auto ] [ flex ] [ flex--align-center ] [ flex--justify-between ]">
             <a class="header__logo [ flex ] [ flex--align-center ]" href="/">
-                <img src="./img/logo 1.png" alt="" />
-                <span class="margin--left-20">PETEKA <br> KARYA TIRTA</span>
+                <img src="./img/main-logo.png" alt="" />
               </a>
             <div class="header__navigation [ flex ] [ flex--align-center ]">
                 
@@ -86,19 +85,14 @@
                     <div class="header__addon">
                     <ul class="language">
                         <li>
-                        <a href="/de/home.html" hreflang="de-DE" title="Deutsch">
-                            Deutsch
-                        </a>
+                            <a href="/de/home.html" hreflang="de-DE" title="Deutsch">
+                                Deutsch
+                            </a>
                         </li>
                         <li>
-                        <a href="/en/home.html" hreflang="en-US" title="english">
-                            English
-                        </a>
-                        </li>
-                        <li>
-                        <a href="/es/home.html" hreflang="es-ES" title="spanisch">
-                            Español
-                        </a>
+                            <a href="/en/home.html" hreflang="en-US" title="english">
+                                English
+                            </a>
                         </li>
                     </ul>
                     </div>
@@ -106,7 +100,24 @@
                
             </div>
 
-            <div class="header__actions">
+            <div class="header__action">
+                
+                <button data-type-button="language">
+                    EN
+                    <ul class="language">
+                        <li>
+                            <a href="/" hreflang="de-DE" title="Deutsch">
+                                DE
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/" class="is-active" hreflang="en-US" title="english">
+                                EN
+                            </a>
+                        </li>
+                    </ul>
+                </button>
+
                 <button data-type-button="search">
                     <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -173,49 +184,6 @@
           </form>
         </div>
     </header>
-    
-    
-    <!-- Lamguage and Search button -->
-    <div class="header__action [ flex ] [ flex--align-center ]">
-        <button data-type-button="language">
-            EN
-            <ul class="language">
-                <li>
-                    <a href="/" hreflang="de-DE" title="Deutsch">
-                        DE
-                    </a>
-                </li>
-                <li>
-                    <a href="/" class="is-active" hreflang="en-US" title="english">
-                        EN
-                    </a>
-                </li>
-                <li>
-                    <a href="/" hreflang="es-ES" title="spanisch">
-                        ES
-                    </a>
-                </li>
-            </ul>
-        </button>
-        <button data-type-button="search">
-            <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            >
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            </svg>
-        </button>
-      
-    </div>
-
 
     <!-- main content -->
     <main class="wrapper [ padding--bottom-5 ]">
@@ -239,37 +207,85 @@
         </div>
         <!-- top section -->
         <div class="wrapper__inner">
-            <section class="wrapper__main [ padding--y-50 ]" data-aos="fade-up"  data-aos-duration="1500">
+            <section class="wrapper__main [ padding-top-50 ]" data-aos="fade-up"  data-aos-duration="1500">
                 <div class="bg-full" style="background-image: url('/img/bg-achievements.png');"></div>
-                <div class=" [ container--width-xxl ] [ margin--x-auto ]">
-                    <h1 class="is-bg margin--bottom-30">Achievements</h1>
+                <div class="[ container--width-xxl ] [ margin--x-auto ]">
+
+                    <h1 class="is-full">
+                        <span>Our</span>
+                        Achievements
+                    </h1>
+
                     <div class="wrapper__achievements">
+
                         <div class="wrapper__achievements--item">
-                            <div class="wrapper__achievements--year">
-                                <h2>2005</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, minima iure! Unde, quo hic reiciendis odio saepe laborum neque esse placeat inventore vitae dignissimos magnam asperiores facere a tempora eum.</p>
+                            <div class="wrapper__achievements--icon">
+
                             </div>
+                            <h2>Title</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur..</p>
                         </div>
 
                         <div class="wrapper__achievements--item">
-                            <div class="wrapper__achievements--year">
-                            <h2>2010</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, minima iure! Unde, quo hic reiciendis odio saepe laborum neque esse placeat inventore vitae dignissimos magnam asperiores facere a tempora eum.</p>
+                            <div class="wrapper__achievements--icon">
+
                             </div>
+                            <h2>Title</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur..</p>
                         </div>
 
                         <div class="wrapper__achievements--item">
-                            <div class="wrapper__achievements--year">
-                            <h2>2015</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, minima iure! Unde, quo hic reiciendis odio saepe laborum neque esse placeat inventore vitae dignissimos magnam asperiores facere a tempora eum.</p>
+                            <div class="wrapper__achievements--icon">
+
                             </div>
+                            <h2>Title</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur..</p>
                         </div>
 
                         <div class="wrapper__achievements--item">
-                            <div class="wrapper__achievements--year">
-                            <h2>2020</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, minima iure! Unde, quo hic reiciendis odio saepe laborum neque esse placeat inventore vitae dignissimos magnam asperiores facere a tempora eum.</p>
+                            <div class="wrapper__achievements--icon">
+
                             </div>
+                            <h2>Title</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur..</p>
+                        </div>
+
+                        <div class="wrapper__achievements--item">
+                            <div class="wrapper__achievements--icon">
+
+                            </div>
+                            <h2>Title</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur..</p>
+                        </div>
+
+                        <div class="wrapper__achievements--item">
+                            <div class="wrapper__achievements--icon">
+
+                            </div>
+                            <h2>Title</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur..</p>
+                        </div>
+
+                    </div>
+
+                    <h1 class="is-full">
+                        <span>Why</span>
+                        Choose us
+                    </h1>
+
+                    <div class="wrapper__choose">
+                        <div class="wrapper__choose--item">
+                            <img src="/img/people.png" alt="">
+                        </div>
+                        <div class="wrapper__choose--item">
+                            <ul>
+                                <li>Proven for providing optimal services within years</li>
+                                <li>Strategic asset's locations widespread throughout Indonesia</li>
+                                <li>Enormous storing capacity</li>
+                                <li>Modern and digitalized equipment</li>
+                                <li>Fast response customer service</li>
+                                <li>Caring for climate change (green terminals)</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
