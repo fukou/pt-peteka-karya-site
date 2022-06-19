@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search &mdash; Document</title>
+    <!-- main style -->
+    <link rel="stylesheet" href="/css/style.min.css" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Nunito:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Poppins:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- font icons -->
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
+
+    <!-- aos animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- dummy maps -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+      integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+      integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+      crossorigin=""
+    ></script>
+
+     <!-- tabs -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/cferdinandi/tabby@12.0.0/dist/css/tabby-ui.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/tabby@12.0.0/dist/js/tabby.polyfills.min.js"></script>
+
+  </head>
+  <body class="page">
+     <!-- header -->
+     <header class="header">
+        <div
+          class="header__inner [ margin--x-auto ] [ flex ] [ flex--align-center ] [ flex--justify-between ]"
+        >
+          <a class="header__logo [ flex ] [ flex--align-center ]" href="/">
+            <img src="./img/main-logo.png" alt="" />
+          </a>
+          <div class="header__navigation [ flex ] [ flex--align-center ]">
+            <nav
+              class="header__links [ container--width-xxxl ] [ margin--x-auto ]"
+            >
+              <ul class="header__links__menu [ flex ] [ flex--align-center ]">
+                <li
+                  class="header__links__menu--item--active header__links__menu--item header__links__menu--item--has-submenu"
+                >
+                  <a href="#">About us</a>
+                  <ul class="header__links__submenu">
+                    <li class="header__links__submenu--item">
+                      <a href="#">Who We Are</a>
+                    </li>
+                    <li class="header__links__submenu--item">
+                      <a href="#">Strategic Approach</a>
+                    </li>
+                    <li class="header__links__submenu--item">
+                      <a href="#">Corporate Movies</a>
+                    </li>
+                    <li class="header__links__submenu--item">
+                      <a href="#">History</a>
+                    </li>
+                    <li class="header__links__submenu--item">
+                      <a href="#">Investment</a>
+                    </li>
+                    <li class="header__links__submenu--item">
+                      <a href="#">Career</a>
+                    </li>
+                    <li class="header__links__submenu--item">
+                      <a href="#">Parent Company</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="header__links__menu--item header__links__menu--item--has-submenu">
+                  <a href="#">Business Areas</a>
+                  <ul class="header__links__submenu">
+                      <li class="header__links__submenu--item">
+                        <a href="#">Who We Are</a>
+                      </li>
+                      <li class="header__links__submenu--item">
+                        <a href="#">Strategic Approach</a>
+                      </li>
+                      <li class="header__links__submenu--item">
+                        <a href="#">Corporate Movies</a>
+                      </li>
+                      <li class="header__links__submenu--item">
+                        <a href="#">History</a>
+                      </li>
+                      <li class="header__links__submenu--item">
+                        <a href="#">Investment</a>
+                      </li>
+                      <li class="header__links__submenu--item">
+                        <a href="#">Career</a>
+                      </li>
+                      <li class="header__links__submenu--item">
+                        <a href="#">Parent Company</a>
+                      </li>
+                    </ul>
+                </li>
+                <li class="header__links__menu--item">
+                  <a href="#">Responsibility</a>
+                </li>
+                <li class="header__links__menu--item">
+                  <a href="#">News & Info</a>
+                </li>
+                <li class="header__links__menu--item"><a href="#">Contact</a></li>
+              </ul>
+              <div class="header__addon">
+                <ul class="language">
+                  <li>
+                    <a href="/de/home.html" hreflang="de-DE" title="Deutsch">
+                      Deutsch
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/en/home.html" hreflang="en-US" title="english">
+                      English
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+  
+          <div class="header__action">
+            <button data-type-button="language">
+              EN
+              <ul class="language">
+                <li>
+                  <a href="/" hreflang="de-DE" title="Deutsch"> DE </a>
+                </li>
+                <li>
+                  <a href="/" class="is-active" hreflang="en-US" title="english">
+                    EN
+                  </a>
+                </li>
+              </ul>
+            </button>
+  
+            <button data-type-button="search">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </button>
+  
+            <button data-type-button="hamburger">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+  
+          <!-- <div class="header__pertamina" style="background-image: url('./img/peteka\ line\ line.png');background-size:cover;">
+                  <img src="/img/pertamina-logo.png" alt="">
+              </div> -->
+        </div>
+  
+        <div class="header__search">
+          <form
+            action=""
+            class="[ flex ] [ flex--align-center ] [ container--width-xxxl ] [ margin--x-auto ]"
+          >
+            <input type="search" name="" id="" placeholder="Search term" />
+            <div>
+              <button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </header>
+
+    <!-- main content -->
+    <main class="wrapper [ padding--bottom-5 ]">
+      <!-- Hero section -->
+      <div class="wrapper__hero" style="background-image: url('/img/hero.png')"></div>
+
+      <!-- Breadcrumbs -->
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <div class="container--width-xxl [ margin--x-auto ]">
+          <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li
+              itemprop="itemListElement"
+              itemscope
+              itemtype="https://schema.org/ListItem"
+            >
+              <a href="/" itemprop="item">
+                <span itemprop="name" class="sr-only">Home</span>
+                <svg
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                  />
+                </svg>
+              </a>
+              <meta itemprop="position" content="1" />
+            </li>
+            <li
+              itemprop="itemListElement"
+              itemscope
+              itemtype="https://schema.org/ListItem"
+            >
+              <a href="#" itemprop="item">
+                <span itemprop="name">Products</span>
+              </a>
+              <meta itemprop="position" content="2" />
+            </li>
+            <li
+              itemprop="itemListElement"
+              itemscope
+              itemtype="https://schema.org/ListItem"
+            >
+              <a href="#" itemprop="item">
+                <span itemprop="name">One of my categories</span>
+              </a>
+              <meta itemprop="position" content="3" />
+            </li>
+            <li
+              itemprop="itemListElement"
+              itemscope
+              itemtype="https://schema.org/ListItem"
+            >
+              <a href="#" itemprop="item">
+                <span itemprop="name">A subcategory</span>
+              </a>
+              <meta itemprop="position" content="4" />
+            </li>
+            <li
+              itemprop="itemListElement"
+              itemscope
+              itemtype="https://schema.org/ListItem"
+            >
+              <span itemprop="item" aria-current="page">
+                <span itemprop="name">Search results</span>
+              </span>
+              <meta itemprop="position" content="5" />
+            </li>
+          </ol>
+        </div>
+      </nav>
+
+      <div class="wrapper__search">
+
+        <h1>Search results</h1>
+        
+        <div class="wrapper__search__form">
+            <form action="">
+                <input type="text" name="" id="">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+
+        <div class="wrapper__search__top">
+            <p>
+                Results <strong>1</strong> to <strong>10</strong> of <strong>54</strong>
+            </p>
+
+            <div class="wrapper__search__pagination">
+                <span>Page</span>
+                <ul>
+                    <li><a href="#"><i class="las la-angle-left"></i></a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#"><i class="las la-angle-right"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="wrapper__search__bottom">
+
+           <div class="lists-search">
+            <h2>Title search here</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae, alias? Tenetur odit, laboriosam porro voluptatum eius vel voluptas totam omnis sint vero deleniti, consequuntur provident eveniet quas. Laboriosam, a. Incidunt nihil adipisci iure dignissimos facere consequatur labore, quasi veritatis aspernatur quis quo aliquid tenetur voluptatibus, similique magni corrupti quos dolore hic libero minima explicabo doloremque. Reprehenderit alias praesentium aliquam consequatur autem iusto aut voluptatum minima inventore officia excepturi unde esse cupiditate dolores mollitia ut, ipsum ad deleniti vel aperiam, quia sapiente nihil saepe. Distinctio sit nihil aliquid, eligendi earum officia sequi aliquam quod? Error laudantium quia illo nulla ab velit?</p>
+
+            <a href="#">/en/responsibility/corporate-citizenship/details/oiltanking-cartagena-organizes-drawing-contest-and-presentations-at-schools-on-world-water-day.html</a>
+           </div>
+
+           <div class="lists-search">
+            <h2>Title search here</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae, alias? Tenetur odit, laboriosam porro voluptatum eius vel voluptas totam omnis sint vero deleniti, consequuntur provident eveniet quas. Laboriosam, a. Incidunt nihil adipisci iure dignissimos facere consequatur labore, quasi veritatis aspernatur quis quo aliquid tenetur voluptatibus, similique magni corrupti quos dolore hic libero minima explicabo doloremque. Reprehenderit alias praesentium aliquam consequatur autem iusto aut voluptatum minima inventore officia excepturi unde esse cupiditate dolores mollitia ut, ipsum ad deleniti vel aperiam, quia sapiente nihil saepe. Distinctio sit nihil aliquid, eligendi earum officia sequi aliquam quod? Error laudantium quia illo nulla ab velit?</p>
+
+            <a href="#">/en/responsibility/corporate-citizenship/details/oiltanking-cartagena-organizes-drawing-contest-and-presentations-at-schools-on-world-water-day.html</a>
+           </div>
+
+           <div class="lists-search">
+            <h2>Title search here</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae, alias? Tenetur odit, laboriosam porro voluptatum eius vel voluptas totam omnis sint vero deleniti, consequuntur provident eveniet quas. Laboriosam, a. Incidunt nihil adipisci iure dignissimos facere consequatur labore, quasi veritatis aspernatur quis quo aliquid tenetur voluptatibus, similique magni corrupti quos dolore hic libero minima explicabo doloremque. Reprehenderit alias praesentium aliquam consequatur autem iusto aut voluptatum minima inventore officia excepturi unde esse cupiditate dolores mollitia ut, ipsum ad deleniti vel aperiam, quia sapiente nihil saepe. Distinctio sit nihil aliquid, eligendi earum officia sequi aliquam quod? Error laudantium quia illo nulla ab velit?</p>
+
+            <a href="#">/en/responsibility/corporate-citizenship/details/oiltanking-cartagena-organizes-drawing-contest-and-presentations-at-schools-on-world-water-day.html</a>
+           </div>
+
+           <div class="lists-search">
+            <h2>Title search here</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae, alias? Tenetur odit, laboriosam porro voluptatum eius vel voluptas totam omnis sint vero deleniti, consequuntur provident eveniet quas. Laboriosam, a. Incidunt nihil adipisci iure dignissimos facere consequatur labore, quasi veritatis aspernatur quis quo aliquid tenetur voluptatibus, similique magni corrupti quos dolore hic libero minima explicabo doloremque. Reprehenderit alias praesentium aliquam consequatur autem iusto aut voluptatum minima inventore officia excepturi unde esse cupiditate dolores mollitia ut, ipsum ad deleniti vel aperiam, quia sapiente nihil saepe. Distinctio sit nihil aliquid, eligendi earum officia sequi aliquam quod? Error laudantium quia illo nulla ab velit?</p>
+
+            <a href="#">/en/responsibility/corporate-citizenship/details/oiltanking-cartagena-organizes-drawing-contest-and-presentations-at-schools-on-world-water-day.html</a>
+           </div>
+
+           <div class="lists-search">
+            <h2>Title search here</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae, alias? Tenetur odit, laboriosam porro voluptatum eius vel voluptas totam omnis sint vero deleniti, consequuntur provident eveniet quas. Laboriosam, a. Incidunt nihil adipisci iure dignissimos facere consequatur labore, quasi veritatis aspernatur quis quo aliquid tenetur voluptatibus, similique magni corrupti quos dolore hic libero minima explicabo doloremque. Reprehenderit alias praesentium aliquam consequatur autem iusto aut voluptatum minima inventore officia excepturi unde esse cupiditate dolores mollitia ut, ipsum ad deleniti vel aperiam, quia sapiente nihil saepe. Distinctio sit nihil aliquid, eligendi earum officia sequi aliquam quod? Error laudantium quia illo nulla ab velit?</p>
+
+            <a href="#">/en/responsibility/corporate-citizenship/details/oiltanking-cartagena-organizes-drawing-contest-and-presentations-at-schools-on-world-water-day.html</a>
+           </div>
+        </div>
+
+        <div class="wrapper__search__pagination">
+            <span>Page</span>
+            <ul>
+                <li><a href="#"><i class="las la-angle-left"></i></a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#"><i class="las la-angle-right"></i></a></li>
+            </ul>
+        </div>
+
+      </div>
+
+    </main>
+
+    <footer class="footer" style="background-image: url('/img/bg-footer.png')">
+        <div
+          class="footer__inner [ container--width-xxl ] [ margin--x-auto ] [ padding--y-30 ]"
+        >
+          <div class="footer__links">
+            <ul class="footer__links__menu [ flex ] [ flex--justify-center ]">
+              <li
+                class="footer__links__menu--item footer__links__menu--item--has-submenu"
+              >
+                <a href="#">About us</a>
+                <ul class="footer__links__menu">
+                  <li class="footer__links__menu--item--submenu">
+                    <a href="#">Who We Are</a>
+                  </li>
+                  <li class="footer__links__menu--item--submenu">
+                    <a href="#">Strategic Approach</a>
+                  </li>
+                  <li class="footer__links__menu--item--submenu">
+                    <a href="#">Corporate Movies</a>
+                  </li>
+                  <li class="footer__links__menu--item--submenu">
+                    <a href="#">History</a>
+                  </li>
+                  <li class="footer__links__menu--item--submenu">
+                    <a href="#">Investment</a>
+                  </li>
+                  <li class="footer__links__menu--item--submenu">
+                    <a href="#">Career</a>
+                  </li>
+                  <li class="footer__links__menu--item--submenu">
+                    <a href="#">Parent Company</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="footer__links__menu--item">
+                <a href="#">Business Areas</a>
+              </li>
+              <li class="footer__links__menu--item">
+                <a href="#">Responsibility</a>
+              </li>
+              <li class="footer__links__menu--item">
+                <a href="#">News & Info</a>
+              </li>
+              <li class="footer__links__menu--item">
+                <a href="#">Contact</a>
+                <div class="footer__socmed">
+                  <ul>
+                    <li>
+                      <a href="#"><i class="lab la-facebook-f"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="lab la-twitter"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="lab la-instagram"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__copyright [ padding--y-30 ]">
+          <div class="[ container--width-xxl ] [ margin--x-auto ]">
+            <div class="footer__copyright__text">
+              Copyright &copy; PKT2022. All right reserved.
+            </div>
+            <div class="footer__copyright__logo">
+              <img src="/img/logo 1.png" alt="" />
+              <span
+                >PETEKA <br />
+                KARYA TIRTA</span
+              >
+            </div>
+          </div>
+        </div>
+      </footer>
+  
+      <!-- chatbox -->
+      <div class="wa-btn">
+        <a href="#" class="wa-btn__button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path
+              d="M24 11.7c0 6.45-5.27 11.68-11.78 11.68-2.07 0-4-.53-5.7-1.45L0 24l2.13-6.27a11.57 11.57 0 0 1-1.7-6.04C.44 5.23 5.72 0 12.23 0 18.72 0 24 5.23 24 11.7M12.22 1.85c-5.46 0-9.9 4.41-9.9 9.83 0 2.15.7 4.14 1.88 5.76L2.96 21.1l3.8-1.2a9.9 9.9 0 0 0 5.46 1.62c5.46 0 9.9-4.4 9.9-9.83a9.88 9.88 0 0 0-9.9-9.83m5.95 12.52c-.08-.12-.27-.19-.56-.33-.28-.14-1.7-.84-1.97-.93-.26-.1-.46-.15-.65.14-.2.29-.75.93-.91 1.12-.17.2-.34.22-.63.08-.29-.15-1.22-.45-2.32-1.43a8.64 8.64 0 0 1-1.6-1.98c-.18-.29-.03-.44.12-.58.13-.13.29-.34.43-.5.15-.17.2-.3.29-.48.1-.2.05-.36-.02-.5-.08-.15-.65-1.56-.9-2.13-.24-.58-.48-.48-.64-.48-.17 0-.37-.03-.56-.03-.2 0-.5.08-.77.36-.26.29-1 .98-1 2.4 0 1.4 1.03 2.76 1.17 2.96.14.19 2 3.17 4.93 4.32 2.94 1.15 2.94.77 3.47.72.53-.05 1.7-.7 1.95-1.36.24-.67.24-1.25.17-1.37"
+            />
+          </svg>
+        </a>
+      </div>
+      <!-- End of .chatbox -->
+
+    <!-- aos animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- main js -->
+    <script src="js/app.js"></script>
+  </body>
+</html>

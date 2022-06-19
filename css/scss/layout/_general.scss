@@ -849,6 +849,153 @@ html {
       }
     }
   }
+  &__search {
+    padding:3rem 0 5rem 0;
+    max-width: 1320px;
+    margin:0 auto;
+
+    @media (max-width:1300px) {
+      padding:3rem 2rem 5rem 2rem;
+    }
+
+    h1 {
+      margin-bottom: 1rem;
+      color:$color-primary;
+    }
+
+    .lists-search {
+      margin-bottom: 2rem;
+      padding:1rem 0;
+
+      border-top:5px solid rgba($color-grey-dark, 0.15);
+
+      h1,h2,h3 {
+        font-size: 30px;
+      }
+
+      :is(h1,h2,h3,h4,h5,h6,p) {
+        margin:1rem 0;
+      }
+
+      a {
+        color:$color-primary;
+      }
+    }
+
+    &__form {
+      max-width: 50rem;
+      form {
+        display: flex;
+        align-items: center;
+      }
+
+      input[type=text],
+      input[type=search] {
+        flex-grow:1;
+      }
+
+      input, textarea, select {
+        appearance: none;
+        box-shadow: none;
+        width: 100%;
+        padding:8px 16px;
+        border:1px solid rgba($color-grey, 0.75);
+        background-color:transparent;
+        color:rgba($color-black, 1);
+      }
+
+      select {
+          padding: 9px 16px;
+      }
+
+      button {
+          min-width:150px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+
+          padding-top: 0.625rem;
+          padding-bottom: 0.625rem;
+          padding-left: 0.9375rem;
+          padding-right: 0.9375rem;
+
+          font-weight: 600;
+          font-style: normal;
+          text-decoration: none;
+          cursor: pointer;
+
+          word-break: normal;
+          height: auto;
+          border:0;
+
+          background-color: rgba($color-primary, 1);
+          color:rgba($color-white, 1);
+      }
+    }
+
+    &__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin:2rem 0;
+      gap:2rem;
+    }
+
+    &__bottom {
+      margin-bottom: 3rem;
+    }
+
+    &__pagination {
+      display: flex;
+      align-items: center;
+      gap:1rem;
+      flex-wrap: wrap;
+
+      span {
+        color:$color-grey-dark;
+      }
+
+      ul {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        list-style: none;
+        padding:0;
+        margin:0;
+        gap:1rem;
+
+        li {
+          a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 40px;
+            max-width: 40px;
+            height: 40px;
+
+            text-decoration: none;
+            color:$color-black;
+            background-color: $color-grey;
+
+            transition: 0.45s;
+
+            &:hover {
+              background-color: $color-primary;
+              color:$color-white;
+            }
+          }
+          
+          &.active {
+            a {
+             background-color: $color-primary;
+             color:$color-white;
+            }
+           }
+        }
+      }
+    }
+  }
 }
 
 .quick-finder {
