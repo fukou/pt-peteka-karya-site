@@ -13,7 +13,7 @@
     transition: 0.5s;
     z-index: 3;
 
-    &.fade-in {
+    &.fade-in, &.is-changed {
         background-color: $color-white;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
         .header__logo {
@@ -21,7 +21,7 @@
                 filter:invert(100%)
             }
             span {
-                color:$color-secondary;
+                color:$color-black;
             }
         }
         .header__links {
@@ -50,6 +50,10 @@
 
     &__inner {
         justify-content: flex-start;
+        padding:0 1rem 0 0;
+        @media (max-width:$max-md) {
+            padding:0;
+        }
     }
 
     &__logo {
@@ -64,10 +68,10 @@
         img {
             position: relative;
             z-index: 1;
-            max-width: 70px;
+            max-width: 250px;
             height: auto;
             @media (max-width:$max-md) {
-                max-width: 50px;
+                max-width: 200px;
             }
         }
         span {
@@ -96,15 +100,11 @@
         }
     }
     
-    &__actions {
+    &__action {
         padding-right: 1rem;
         display: flex;
         align-items: center;
         gap:1rem;
-
-        @media (min-width:$min-lg) {
-            display: none;
-        }
         
         button[data-type-button] {
             appearance: none;
@@ -134,58 +134,17 @@
         }
 
         button {
-            &[data-type-button="search"], &[data-type-button="hamburger"] {
+            &[data-type-button="hamburger"] {
                 @media (min-width:$min-lg) {
                     display: none;
                 }
             }
-        }
-    }
-
-    &__action {
-        position: absolute;
-        right:5ch;
-        top:14.75ch;
-        z-index: 2;
-
-        flex-direction: column;
-        gap:1rem;
-        button[data-type-button] {
-            appearance: none;
-            border:0;
-            cursor: pointer;
-
-            width: 3.5rem;
-            height:3.5rem;
-
-            font-size: 1rem;
-            
-            display:inline-flex;
-            align-items: center;
-            justify-content: center;
-            
-            padding:0.5rem;
-            border-radius: 50%;
-
-            background-color: transparent;
-            border:2px solid currentColor;
-            color:$color-white;
-
-            @media (max-width:$max-md) {
-                width: 2.75rem;
-                height: 2.75em
-            }
-        } 
-        a {
-            color:$color-white;
-        }
-        button {
             &[data-type-button="language"] {
                 @media (max-width:$max-md) {
                     display: none;
                 }
-                padding:0;
-                border:0;
+                // padding:0;
+                // border:0;
 
                 position: relative;
                 ul.language {
@@ -238,14 +197,9 @@
                     }
                 }
             }
-            &[data-type-button="search"] {
-                @media (max-width:$max-md) {
-                    display: none;
-                }
-            }
         }
     }
-
+    
     &__navigation {
         flex:1;
     }
@@ -375,7 +329,7 @@
                     padding:0.75rem 1rem;
                     border-radius: 6px;
 
-                    font-size: 1rem;
+                    font-size: 1.15rem;
 
                     text-decoration: none;
                     transition: 0.3s;
@@ -435,6 +389,8 @@
             padding:0;
             list-style-type: none;
             background-color: $color-white;
+            border-radius:0 8px 8px 8px;
+            margin-top: -2px;
 
             @media (min-width:$min-md) {
                 position: absolute;
@@ -488,7 +444,8 @@
         margin-top: 0rem;
         z-index: 3;
         background-color: $color-white;
-        // box-shadow: 0 15px 20px -15px rgba(0,0,0,0.8),0 2000px 0 2000px rgba(0,0,0,0.4);
+        box-shadow: 0 15px 20px -15px rgba(0,0,0,0.8),0 2000px 0 2000px rgba(0,0,0,0.4);
+        border-top: 1px solid rgba($color-black, 0.15);
 
         opacity: 0;
         height: 0;

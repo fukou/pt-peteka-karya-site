@@ -114,10 +114,19 @@
   &-item {
       position: relative;
       ul {
+        padding:0;
+        margin:1rem;
         li {
           + li {
             margin-top: 1rem;
           }
+        }
+      }
+      .diagram {
+        max-width: 400px;
+        margin:0 auto;
+        @media (max-width:$max-md) {
+          max-width: 100%;
         }
       }
       &__image {

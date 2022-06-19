@@ -11,4 +11,26 @@ h1 {
 
         padding-bottom: 1rem;
     }
+
+    &.is-full {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        z-index: 1;
+
+        text-align: center;
+
+        margin-bottom: 2rem!important;
+        font-size: 3rem!important;
+
+        color:$color-black!important;
+        text-transform: uppercase;
+
+        span {
+            font-size: 1.5rem;
+        }
+    }
 }

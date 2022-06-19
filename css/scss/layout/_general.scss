@@ -214,17 +214,50 @@ html {
           a {
             display: inline-flex;
             align-items: center;
-            background-color: $color-white;
-            color: $color-secondary;
+            // background-color: $color-white;
+            color:  $color-white;
 
             border-radius: 8px;
-            font-size: 0.85rem;
+            font-size: 1rem;
 
             text-decoration: none;
             padding: 0.25rem 0.5em;
           }
         }
       }
+    }
+
+    &__preview {
+      position: absolute;
+      right:3ch;
+      top:13ch;
+
+      max-width: 300px;
+      max-height: unset;
+
+      border-radius: 6px;
+      overflow: hidden;
+      transition: 0.35s;
+
+      &:hover {
+        max-width: 1300px;
+      } 
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit:cover;
+      }
+
+      
+      @media (max-width:$max-md) {
+        left:1ch;
+        right:1ch;
+        top:12ch;
+
+        max-width: 100%;
+      }
+
     }
   }
   &__inner {
@@ -234,7 +267,7 @@ html {
   }
   &__main {
     @media (max-width: $max-md) {
-      padding: 0 1rem;
+      padding: 0 2rem;
     }
     h1 {
       color: $color-primary;
@@ -443,10 +476,29 @@ html {
   &__achievements {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(600px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
     gap:3rem;
+    padding-top: 3rem;
+    padding-bottom: 8rem;
+
+    @media (max-width:$max-md) {
+      grid-template-columns: 1fr;
+      gap:1rem;
+    }
 
     z-index: 2;
+
+    &--icon {
+      background-color: $color-secondary;
+      width: 150px;
+      height: 150px;
+      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      margin-bottom: 1rem;
+    }
     
     &--item {
       display: flex;
@@ -478,7 +530,29 @@ html {
         font-weight: bold;
         
         color:$color-black;
+        @media (max-width:$max-md) {
+          font-size: 1.75rem;
+        }
       }
+
+      @media (max-width:$max-md) {
+        padding:1rem 0;
+      }
+    }
+  }
+  &__choose {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:1rem;
+
+    @media (max-width:$max-md) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    &--item {
+
     }
   }
   &__teaser {
