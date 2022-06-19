@@ -816,6 +816,9 @@ html {
       margin-top: 3rem;
       max-width: 50rem;
 
+      position: relative;
+      z-index: 2;
+
       .contact-info {
         color:$color-white;
 
