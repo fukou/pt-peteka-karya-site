@@ -319,6 +319,8 @@
                     }
                 }
 
+             
+
                 > a {
                     width: 100%;
                     
@@ -361,6 +363,9 @@
                         padding-left: 1rem;
                         padding-right: 1rem;
                     }
+                }
+
+                a {
                     &.is-active {
                         .toggle {
                             i::before {
@@ -369,14 +374,15 @@
                         }
                     }
                 }
+
                 &--has-submenu {
                     &.is-expanded {
-                        ul[class*="submenu"] {
+                        > ul[class*="submenu"] {
                             max-height: 999px;
                         }
                     }
                     &:hover {
-                        .header__links__submenu {
+                        > .header__links__submenu {
                             opacity: 1;
                             visibility: visible;
                             transform: translateY(0px);
@@ -391,8 +397,39 @@
             padding:0;
             list-style-type: none;
             background-color: $color-white;
-            border-radius:0 8px 8px 8px;
             margin-top: -2px;
+
+            @media (min-width:$min-lg) {
+               
+            border-radius:0 8px 8px 8px;
+            }
+
+            .header__links__submenu {
+                left:100%;
+                top:0;
+
+                li > a {
+                    padding-left: 2rem;
+                }
+                
+                
+                @media (min-width:$min-lg) {
+                    border-radius: 8px;
+                    li > a {
+                        padding-left: 1rem;
+                    }
+                }
+
+                li {
+                    &.header__links__menu--item--has-submenu {
+                        .header__links__submenu {
+                            opacity: 1;
+                            visibility: visible;
+                            transform: translateY(0px);
+                        }
+                    }
+                }
+            }
 
             @media (min-width:$min-md) {
                 position: absolute;
@@ -420,6 +457,7 @@
                 > a {
                     display: inline-flex;
                     align-items: center;
+                    justify-content: space-between;
                     text-decoration: none;
                     padding:0.85rem;
 
