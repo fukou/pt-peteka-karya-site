@@ -14,11 +14,11 @@
     z-index: 3;
 
     &.fade-in, &.is-changed {
-        background-color: $color-white;
+        background-color: $color-grey-dark;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
         .header__logo {
             img {
-                filter:invert(100%)
+                // filter:invert(100%)
             }
             span {
                 color:$color-black;
@@ -29,7 +29,7 @@
                 @media (min-width:$min-lg) {
                     &--item:not([class*="active"]) {
                         > a {
-                            color:$color-secondary;
+                            color:$color-white;
                             &:hover {
                                 color:$color-white;
                             }
@@ -40,12 +40,12 @@
         }
         .header__action {
             button {
-                color:$color-secondary;
+                color:$color-white;
             }
         }
         .header__actions {
             button {
-                color:$color-black;
+                color:$color-white;
             }
         }
     }
