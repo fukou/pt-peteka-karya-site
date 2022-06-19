@@ -26,11 +26,13 @@
         }
         .header__links {
             &__menu {
-                &--item:not([class*="active"]) {
-                    > a {
-                        color:$color-secondary;
-                        &:hover {
-                            color:$color-white;
+                @media (min-width:$min-lg) {
+                    &--item:not([class*="active"]) {
+                        > a {
+                            color:$color-secondary;
+                            &:hover {
+                                color:$color-white;
+                            }
                         }
                     }
                 }
