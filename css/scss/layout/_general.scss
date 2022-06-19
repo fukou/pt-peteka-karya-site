@@ -1,6 +1,10 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/screenwidth" as *;
 
+iframe {
+  width: 100%;
+}
+
 .d {
   &-none {
     display: none;
