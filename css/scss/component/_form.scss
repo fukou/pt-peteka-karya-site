@@ -40,22 +40,36 @@
     }
 
     label {
-        clip: rect(1px, 1px, 1px, 1px);
-        clip-path: inset(50%);
-        height: 1px;
-        width: 1px;
-        margin: -1px;
-        overflow: hidden;
-        padding: 0;
-        position: absolute;
+        display: block;
+        color:rgba($color-white, 1);
+        margin-bottom: 1rem;
+        &.hide {
+            clip: rect(1px, 1px, 1px, 1px);
+            clip-path: inset(50%);
+            height: 1px;
+            width: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+        }
     }
 
     input, textarea, select {
         width: 100%;
-        padding:8px 16px;
-        border-color:rgba($color-white, 0.75);
+        padding:8px 0px;
+        border:0;
+        border-bottom:1px solid rgba($color-white, 0.75);
         background-color:transparent;
         color:rgba($color-white, 1);
+    }
+
+    textarea {
+        background-color: $color-white;
+        border-radius: 8px;
+        padding:8px 16px;
+
+        color:$color-black;
     }
 
     select {

@@ -786,7 +786,7 @@ html {
   &__contact {
     position: relative;
     background: rgb(210,78,115);
-    background: linear-gradient(156deg, rgba(210,78,115,1) 0%, rgba(111,36,57,1) 32%, rgba(80,73,110,1) 78%, rgba(33,41,62,1) 100%); 
+    background: linear-gradient(219deg, rgba(210,78,115,1) 0%, rgba(111,36,57,1) 11%, rgba(9,84,145,1) 38%, rgba(2,87,151,1) 78%, rgba(2,87,151,1) 100%); 
 
     padding-top: 150px;
     z-index: 2;
@@ -808,7 +808,20 @@ html {
     .grid {
       gap:0rem;
       &-item {
-        background-color: #444;
+        iframe[src^="https://maps.google.com/"] {
+          height: 350px;
+          border-radius: 8px;
+          overflow: hidden;
+        }
+        &__form {
+          margin:2rem;
+          border:1px solid $color-white;
+          border-radius: 8px;
+          padding:1.5rem;
+        }
+        .is-button {
+          padding:0 1.5rem;
+        }
       }
     }
 
@@ -818,6 +831,10 @@ html {
 
       position: relative;
       z-index: 2;
+
+      @media (min-width:992px) {
+        padding-left: 25%;
+      }
 
       .contact-info {
         color:$color-white;
@@ -847,7 +864,8 @@ html {
         }
           
         a {
-          color:$color-white;
+          color:$color-white!important;
+          text-decoration: none;
         }
       }
     }
