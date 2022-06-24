@@ -129,6 +129,9 @@
           max-width: 100%;
         }
       }
+      &__desc {
+        min-height: 120px;
+      }
       &__image {
           img {
               width: 100%;
