@@ -44,22 +44,60 @@
 
   </head>
   <body class="page">
-    <!-- header -->
     <header class="header">
-      <div class="header__inner [ margin--x-auto ] [ flex ] [ flex--align-center ] [ flex--justify-between ]">
+      <div
+        class="header__inner [ margin--x-auto ] [ flex ] [ flex--align-center ] [ flex--justify-between ]"
+      >
         <a class="header__logo [ flex ] [ flex--align-center ]" href="/">
-          <img src="img/logo 1.png" alt="" />
-          <span class="margin--left-20">PETEKA <br> KARYA TIRTA</span>
+          <img src="img/main-logo.png" alt="" />
         </a>
         <div class="header__navigation [ flex ] [ flex--align-center ]">
-          
-          <nav class="header__links [ container--width-xxxl ] [ margin--x-auto ]">
-              <ul class="header__links__menu [ flex ] [ flex--align-center ]">
-                <li
-                  class="header__links__menu--item header__links__menu--item--has-submenu"
-                >
-                  <a href="#">About us</a>
-                  <ul class="header__links__submenu">
+          <nav
+            class="header__links [ container--width-xxxl ] [ margin--x-auto ]"
+          >
+            <ul class="header__links__menu [ flex ] [ flex--align-center ]">
+              <li
+                class="header__links__menu--item--active header__links__menu--item header__links__menu--item--has-submenu"
+              >
+                <a href="#">About us</a>
+                <ul class="header__links__submenu">
+                  <li class="header__links__submenu--item header__links__menu--item--has-submenu">
+                    <a href="#">Who We Are</a>
+                    <ul class="header__links__submenu">
+                      <li class="header__links__submenu--item">
+                        <a href="#">Submenu inside submenu</a>
+                      </li>
+                      <li class="header__links__submenu--item">
+                        <a href="#">A custom link</a>
+                      </li>
+                      <li class="header__links__submenu--item">
+                        <a href="#">More adjustments</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="header__links__submenu--item">
+                    <a href="#">Strategic Approach</a>
+                  </li>
+                  <li class="header__links__submenu--item">
+                    <a href="#">Corporate Movies</a>
+                  </li>
+                  <li class="header__links__submenu--item">
+                    <a href="#">History</a>
+                  </li>
+                  <li class="header__links__submenu--item">
+                    <a href="#">Investment</a>
+                  </li>
+                  <li class="header__links__submenu--item">
+                    <a href="#">Career</a>
+                  </li>
+                  <li class="header__links__submenu--item">
+                    <a href="#">Parent Company</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="header__links__menu--item header__links__menu--item--has-submenu">
+                <a href="#">Business Areas</a>
+                <ul class="header__links__submenu">
                     <li class="header__links__submenu--item">
                       <a href="#">Who We Are</a>
                     </li>
@@ -82,75 +120,86 @@
                       <a href="#">Parent Company</a>
                     </li>
                   </ul>
+              </li>
+              <li class="header__links__menu--item">
+                <a href="#">Responsibility</a>
+              </li>
+              <li class="header__links__menu--item">
+                <a href="#">News & Info</a>
+              </li>
+              <li class="header__links__menu--item"><a href="#">Contact</a></li>
+            </ul>
+            <div class="header__addon">
+              <ul class="language">
+                <li>
+                  <a href="/de/home.html" hreflang="de-DE" title="Deutsch">
+                    Deutsch
+                  </a>
                 </li>
-                <li class="header__links__menu--item">
-                  <a href="#">Business Areas</a>
+                <li>
+                  <a href="/en/home.html" hreflang="en-US" title="english">
+                    English
+                  </a>
                 </li>
-                <li class="header__links__menu--item">
-                  <a href="#">Responsibility</a>
-                </li>
-                <li class="header__links__menu--item">
-                  <a href="#">News & Info</a>
-                </li>
-                <li class="header__links__menu--item"><a href="#">Contact</a></li>
               </ul>
-              <div class="header__addon">
-                <ul class="language">
-                  <li>
-                    <a href="/de/home.html" hreflang="de-DE" title="Deutsch">
-                      Deutsch
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/en/home.html" hreflang="en-US" title="english">
-                      English
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/es/home.html" hreflang="es-ES" title="spanisch">
-                      Español
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </nav>
-          <div class="header__action [ flex ] [ flex--align-center ]">
-            <button data-type-button="language">EN</button>
-            <button data-type-button="search">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <circle cx="11" cy="11" r="8"></circle>
-                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-              </svg>
-            </button>
-            <button data-type-button="hamburger">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <line x1="3" y1="12" x2="21" y2="12"></line>
-                <line x1="3" y1="6" x2="21" y2="6"></line>
-                <line x1="3" y1="18" x2="21" y2="18"></line>
-              </svg>
-            </button>
-          </div>
+            </div>
+          </nav>
         </div>
+
+        <div class="header__action">
+          <button data-type-button="language">
+            EN
+            <ul class="language">
+              <li>
+                <a href="/" hreflang="de-DE" title="Deutsch"> DE </a>
+              </li>
+              <li>
+                <a href="/" class="is-active" hreflang="en-US" title="english">
+                  EN
+                </a>
+              </li>
+            </ul>
+          </button>
+
+          <button data-type-button="search">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+
+          <button data-type-button="hamburger">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <!-- <div class="header__pertamina" style="background-image: url('img/peteka\ line\ line.png');background-size:cover;">
+                <img src="img/pertamina-logo.png" alt="">
+            </div> -->
       </div>
 
       <div class="header__search">
