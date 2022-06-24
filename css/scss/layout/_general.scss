@@ -277,6 +277,16 @@ html {
         display: none;
       }
     }
+    
+    &__text {
+      position: absolute;
+      right:1ch;
+      bottom:1ch;
+      color: white;
+      font-size: 12px;
+
+      padding: 1ch;
+    }
 
     &__category {
       position: absolute;
@@ -284,6 +294,11 @@ html {
       bottom: 1ch;
       padding: 1ch;
       z-index: 2;
+
+      @media (max-width:$max-md) {
+        bottom:8ch;
+      }
+
       ul {
         list-style: none;
         margin: 0;
@@ -441,11 +456,28 @@ html {
 
         .text {
           padding:0 2rem;
-          p {
+
+          p, h1 {
             margin:1rem 0;
           }
+
+          h1 {
+            text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+          }
+
+          background-color: rgba($color-white, 1);
+
+          a {
+            font-weight: bold;
+            text-transform: uppercase;
+            margin:0 5px;
+            color:rgba($color-primary, 1);
+          }
+
           @media (min-width:$min-lg) {
             
+            font-size: 1.25rem;
+
             position: absolute;
             left:50%;
             top:50%;
@@ -458,9 +490,7 @@ html {
             padding:0;
 
             color:$color-white;
-            a {
-              color:$color-white;
-            }
+            background-color: transparent;
           }
         }
 
@@ -706,11 +736,10 @@ html {
       &--item {
         &.is-text {
           padding-left: 3rem;
+          transform: translateY(-40px);
         }
         &.is-image {
-          // position: absolute;
-
-          margin-bottom: -120px;
+          margin-bottom: -160px;
         }
       }
     }
@@ -1151,7 +1180,7 @@ html {
 .wa-btn {
   position: fixed;
   right:3ch;
-  bottom:3ch;
+  bottom:5ch;
 
   z-index: 3;
 
