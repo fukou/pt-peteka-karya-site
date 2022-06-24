@@ -9,7 +9,6 @@
     background-position: center;
     
     &__socmed {
-        
         ul {
             display: flex;
             align-items: center;
@@ -44,11 +43,6 @@
                     max-width: 50%!important;
                 }
             }
-        }
-        
-        @media (max-width:$max-md) {
-            padding-left: 2rem;
-            padding-right: 2rem;
         }
 
     }
