@@ -130,7 +130,10 @@
         }
       }
       &__desc {
-        min-height: 120px;
+        min-height: 180px;
+        h3 {
+          min-height: 55px;
+        }
       }
       &__image {
           img {
