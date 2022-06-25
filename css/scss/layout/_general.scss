@@ -5,6 +5,18 @@ iframe {
   width: 100%;
 }
 
+.overflow {
+  &-hidden {
+    overflow: hidden;
+  }
+  &-visible {
+    overflow: visible;
+  }
+  &-scroll {
+    overflow: scroll;
+  }
+}
+
 .d {
   &-none {
     display: none;
@@ -641,6 +653,10 @@ html {
 
     .is-full {
       grid-column: 1/-1;
+      
+      @media (min-width:$max-md) {
+        margin-bottom: -1rem!important;
+      }
     }
 
     @media (max-width:$max-md) {
@@ -720,23 +736,31 @@ html {
       grid-column: 1/-1;
      
       @media (min-width:$min-md) {
-        padding-left: 4rem;
+        padding-left: 2rem;
         margin-left: 1rem;
       }
     }
 
     &--item {
       &.is-image {
-        margin-bottom: -160px;
+        margin-bottom: -150px;
+      }
+      &.is-text {
+        
+        transform: translateY(-60px);
+        ul {
+          margin:1rem;
+          padding:0;
+        }
       }
     }
 
     @media (min-width:$min-md) {
       
       &--item {
+        transform: translateY(-60px);
         &.is-text {
           padding-left: 3rem;
-          transform: translateY(-40px);
         }
         &.is-image {
           margin-bottom: -160px;
