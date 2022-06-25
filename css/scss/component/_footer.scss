@@ -7,6 +7,10 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+
+    @media (max-width:1400px) {
+        padding:0 2rem;
+    }
     
     &__socmed {
         ul {
@@ -116,7 +120,7 @@
         &__logo {
             display: flex;
             align-items: center;
-            justify-content: flex-end;
+            justify-content: center;
             img {
                 max-width: 60px;
             }
