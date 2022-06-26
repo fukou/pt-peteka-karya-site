@@ -5,7 +5,10 @@
     @media (max-width:1400px) {
         padding:0 25px;
     }
-}
+    @media (max-width:992px) {
+        padding:0 5px 50px 5px;
+    }
+ }
 
 .tns-ovh {
     padding: 30px 0;
@@ -30,6 +33,14 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @media (max-width:$max-md) {
+            top:auto;
+            bottom:-50px;
+            transform: none;
+            justify-content: center;
+            gap:1rem;
+        }
 
         > button {
             display: inline-flex;
@@ -61,7 +72,8 @@
                 position: absolute;
                 left:-40px;
                 @media (max-width:$max-sm) {
-                    left:-15px;
+                    position: unset;
+                    left:-5px;
                 }
                 &:before {
                     content: "\f104";
@@ -72,7 +84,8 @@
                 position: absolute;
                 right:-40px;
                 @media (max-width:$max-sm) {
-                    right:-15px;
+                    position: unset;
+                    right:-5px;
                 }
                 &:before {
                     content: "\f105";
