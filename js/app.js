@@ -79,11 +79,12 @@ var app = {
     mobileSubmenuToggle: () => {
         const submenu = document.querySelectorAll(".header ul > li.header__links__menu--item--has-submenu > a");
         submenu.forEach(function(subs, index) {
-            subs.insertAdjacentHTML('beforeend', '<span class="toggle"><i class="las la-angle-down"></i></span>');
+            subs.insertAdjacentHTML('afterend', '<button class="toggle"><i class="las la-angle-down"></i></button>');
 
-            subs.querySelector('.toggle').addEventListener("click", function(e) {
-                subs.querySelector('.toggle').parentElement.parentElement.classList.toggle("is-expanded");
-                subs.querySelector('.toggle').parentElement.classList.toggle("is-active");
+            console.log( subs.nextElementSibling.nextElementSibling);
+            subs.nextElementSibling.addEventListener("click", function() {
+                subs.nextElementSibling.classList.toggle("is-active");
+                subs.parentElement.classList.toggle("is-expanded");
             })
         });
     },

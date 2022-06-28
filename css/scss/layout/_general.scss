@@ -278,6 +278,10 @@ html {
     padding-bottom: calc(100vh - 0px);
     margin: 0rem 0 0rem 0;
 
+    @media (max-width:$max-md) {
+      padding-bottom: 50%;
+    }
+
     #map {
       position: absolute;
       top: 0;
@@ -359,13 +363,8 @@ html {
         object-fit:cover;
       }
 
-      
       @media (max-width:$max-md) {
-        left:1ch;
-        right:1ch;
-        top:12ch;
-
-        max-width: 100%;
+        display: none;
       }
 
     }
