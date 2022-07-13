@@ -312,12 +312,13 @@ html {
       z-index: 2;
 
       @media (max-width:$max-md) {
-        position: relative;
-        z-index: 3;
-        inset:0;
+        // position: relative;
+        // z-index: 3;
+        // inset:0;
 
-        background-color: rgba($color-grey, 0.75);
-        margin-top: -5px;
+        // background-color: rgba($color-grey, 0.75);
+        // margin-top: -5px;
+        display: none;
       }
 
       ul {
@@ -408,7 +409,7 @@ html {
     z-index: 2;
 
     @media (max-width:$max-md) {
-      padding-top: 4rem;
+      // padding-top: 4rem;
     }
   }
   &__main {
