@@ -767,6 +767,10 @@ html {
       @media (min-width:$min-md) {
         padding-left: 2rem;
         margin-left: 1rem;
+
+        font-size: 1.5rem;
+
+        text-transform: uppercase;
       }
     }
 
@@ -776,7 +780,7 @@ html {
       }
       &.is-text {
         
-        transform: translateY(-60px);
+        // transform: translateY(-60px);
         ul {
           margin:1rem;
           padding:0;
@@ -787,7 +791,7 @@ html {
     @media (min-width:$min-md) {
       
       &--item {
-        transform: translateY(-60px);
+        // transform: translateY(-60px);
         &.is-text {
           padding-left: 3rem;
         }

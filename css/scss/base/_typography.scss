@@ -56,5 +56,51 @@ h2 {
         span {
             font-size: 1.5rem;
         }
+
+        &.is-line {
+            position: relative;
+            font-size: 1.5rem!important;
+            font-weight: 500!important;
+
+            color:$color-secondary!important;
+            padding-bottom: 0.5rem;
+            padding-left: 2rem;
+            padding-right: 3rem;
+
+            margin-left: 5rem;
+
+            border-bottom: 3px solid currentColor;
+            border-left: 4px solid currentColor;
+
+            width: max-content;
+
+            margin-bottom: 2rem!important;
+
+            &::before {
+                content:'';
+                position: absolute;
+                left:0;
+                width: 50vw;
+                height: 4px;
+                margin-left: -50vw;
+
+                background-color: $color-secondary;
+            }
+
+            &::after {
+                content:'';
+                position: absolute;
+                right:0;
+                top:50%;
+
+                transform: translateY(90%);
+
+                width: 15px;
+                height: 15px;
+                background-color: $color-secondary;
+
+                border-radius: 50%;
+            }
+        }
     }
 }
