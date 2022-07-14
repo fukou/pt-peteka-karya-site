@@ -756,6 +756,10 @@ html {
     grid-template-columns: 1fr;
     gap:1rem;
 
+    @media (min-width:$max-lg) {
+      transform: translateY(-75px);
+    }
+
     @media (max-width:$max-md) {
       display: flex;
       flex-direction: column;
@@ -784,6 +788,11 @@ html {
         ul {
           margin:1rem;
           padding:0;
+          li {
+            + li {
+              margin-top: 0.5rem;
+            }
+          }
         }
       }
     }
@@ -796,7 +805,10 @@ html {
           padding-left: 3rem;
         }
         &.is-image {
-          margin-bottom: -160px;
+          margin-bottom: -200px;
+          img {
+            max-width: 450px;
+          }
         }
       }
     }
