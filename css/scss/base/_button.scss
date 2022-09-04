@@ -3,6 +3,9 @@
 @use '../abstracts/screenwidth' as *;
 
 .btn {
+    appearance: button;
+    box-shadow: none;
+    border:0;
     &__wrapper {
         display: flex;
         align-items: center;

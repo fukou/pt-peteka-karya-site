@@ -3,7 +3,8 @@
 @use '../abstracts/screenwidth' as *;
 
 .footer {
-    background-color: $color-secondary;
+    // background-color: $color-secondary;
+    background-color: #f8f8f8;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -24,16 +25,16 @@
                     margin-left: 1.25rem;
                 }
                 a {
-                    color:$color-white;
+                    color:$color-black;
                     display: inline-flex;
                     align-items: center;
                     justify-content: center;
                     text-decoration: none;
 
-                    font-size: 26px;
+                    font-size: 18px;
 
-                    width: 48px;
-                    height: 48px;
+                    width: 32px;
+                    height: 32px;
                     border:2px solid currentColor;
                     border-radius: 50%;
                 }
@@ -76,7 +77,8 @@
                 > a {
                     display: block;
 
-                    color:$color-white;
+                    // color:$color-white;
+                    color:$color-black;
                     font-size: 1.15rem;
                     font-weight: 600;
                     text-decoration: none;
@@ -86,7 +88,8 @@
                 &--submenu {
                     a {
                         text-decoration: none;
-                        color:$color-white;
+                        // color:$color-white;
+                        color:$color-black;
 
                         font-size: 0.95rem;
                     }
