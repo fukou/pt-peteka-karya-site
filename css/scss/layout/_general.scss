@@ -32,6 +32,7 @@ iframe {
 .embed-responsive {
   position:relative;
   height: 0;
+  display: block;
   > * {
     position: absolute;
     width: 100%;
@@ -103,6 +104,10 @@ iframe {
     &:before {
       display: none;
     }
+  }
+  &-circle {
+    border-radius: 50%;
+    overflow: hidden;
   }
 }
 
@@ -1272,5 +1277,36 @@ html {
     background-color: #25D366;
     border:2px solid currentColor;
     color:$color-white;
+  }
+}
+
+.tabs-menu {
+  list-style: none;
+  margin:0!important;
+  padding: 0!important;
+  li {
+    + li {
+      margin-top: 0!important;
+    }
+    &.active {
+      a, a:hover {
+        background-color: $color-secondary;
+        color:$color-white!important;
+      }
+    }
+    a {
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      padding: 0.85rem 1rem;
+
+      color:$color-secondary!important;
+      text-decoration: none;
+
+      transition: 0.45s;
+      &:hover {
+        background-color: $color-light-grey;
+      }
+    }
   }
 }

@@ -113,7 +113,12 @@
 
   &-item {
       position: relative;
-      ul {
+      &.sticky {
+        position: sticky;
+        top:10rem;
+        align-self: flex-start;
+      }
+      ul:not([class]) {
         padding:0;
         margin:1rem;
         li {
@@ -186,4 +191,16 @@
 
 .grid-wrap {
   padding: $gridGap;
+}
+
+.grid-people {
+  text-align: center;
+  &__info {
+    padding:1rem 0;
+  }
+  &__img {
+    max-width: 150px;
+    margin: 0 auto;
+    display: block;
+  }
 }
