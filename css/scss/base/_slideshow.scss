@@ -52,20 +52,13 @@
             border-radius: 50%;
             background-color: $color-primary;
             color:$color-white;
-            font-size: 0;
+            i {
+                font-size:30px;
+            }
 
             @media (max-width:$max-md) {
                 width: 40px;
                 height: 40px;
-            }
-
-            &:before {
-                font-family: 'Line Awesome Free';
-                font-weight: 900;
-                font-size:30px;
-                @media (max-width:$max-md) {
-                    font-size: 16px;
-                }
             }
 
             &[data-controls=prev] {
@@ -75,9 +68,6 @@
                     position: unset;
                     left:-5px;
                 }
-                &:before {
-                    content: "\f104";
-                }
             }
 
             &[data-controls=next] {
@@ -86,9 +76,6 @@
                 @media (max-width:$max-sm) {
                     position: unset;
                     right:-5px;
-                }
-                &:before {
-                    content: "\f105";
                 }
             }
         }
