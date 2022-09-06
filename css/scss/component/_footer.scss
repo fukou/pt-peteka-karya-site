@@ -10,7 +10,14 @@
     background-position: center;
 
     @media (max-width:1400px) {
-        padding:0 2rem;
+        // padding:0 2rem;
+    }
+
+    &__inner {
+        
+        @media (max-width:1400px) {
+            padding:30px 2rem;
+        }
     }
     
     &__socmed {
@@ -104,6 +111,10 @@
 
         @media (max-width:$max-md) {
             padding:2rem;
+        }
+
+        @media (max-width:1400px) {
+            padding:15px 2rem;
         }
 
         > div {
