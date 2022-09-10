@@ -262,6 +262,9 @@ html {
 .wrapper {
   min-height: calc(100vh - 95px);
   padding-top: 95px;
+  @media (min-width: 1200px) and (max-width: 1400px) {
+    padding-top: 78px; 
+  }
   @media (max-width: $max-md) {
     padding-top: 90px;
   }
