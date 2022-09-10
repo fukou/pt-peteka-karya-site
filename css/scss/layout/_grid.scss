@@ -211,6 +211,7 @@
 
 .grid-gallery {
   position: relative;
+  overflow: hidden;
   &:hover &__caption {
     background-color: rgba(#000, 1);
   }
