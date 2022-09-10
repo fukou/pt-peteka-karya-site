@@ -12,6 +12,9 @@
         padding:0!important;
         .tns-controls {
             > button {
+                width: 45px;
+                height:45px;
+                font-size: 22px;
                 &[data-controls=prev] {
                     left: 30px;
                 }
@@ -20,13 +23,41 @@
                 }
             }
         }
+
+        .grid-gallery {
+            &__caption {
+                background-color: rgba(0,0,0,0)!important;
+                background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+                padding:2.15rem 2rem 6rem 2rem;
+                text-align: center;
+                transition: 0.5s;
+
+                @media (max-width:992px) {
+                    background-color: $color-black!important;
+                }
+
+                :is(h1,h2,h3,h4,h5,h6) {
+                    margin-bottom: 1rem;
+                }
+
+                p {
+                    margin:15px auto;
+                }
+
+                > * {
+                    max-width: 70ch;
+                    margin:0 auto;
+                }
+            }
+            
+            &:hover .grid-gallery__caption {
+                background: linear-gradient(to top, rgba(0, 0, 0, 0.98), transparent);
+            }
+        }
     }
  }
 
 .tns-ovh {
-   @media (max-width:992px) {
-    padding: 30px 0;
-   }
 }
 
 .tns-outer {
@@ -36,7 +67,35 @@
         display: none;
     }
     .tns-nav {
-        display: none;
+        position: absolute;
+        left: 0;
+        bottom:35px;
+
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 15px;
+            height: 15px;
+
+            background-color: transparent;
+            appearance: none;
+            cursor: pointer;
+
+            border:2px solid $color-white;
+            border-radius: 50%;
+            
+            &.tns-nav-active {
+                background-color: $color-white;
+            }
+        }
     }
     .tns-controls {
         width: 100%;
