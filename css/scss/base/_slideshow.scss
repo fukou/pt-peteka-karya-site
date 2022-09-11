@@ -55,10 +55,14 @@
             }
         }
     }
+    &:not(.slideshow-full) {
+        .tns-ovh {
+            padding:30px 0;
+        }
+    }
  }
 
-.tns-ovh {
-}
+
 
 .tns-outer {
     position: relative;
